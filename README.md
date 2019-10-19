@@ -1,8 +1,12 @@
-# Project Overview
- 
+## Project Overview
+ Interactive personal branding website that generates branding templates based on word selections. 
 
 ## Project Description
+This web application aims to help people design their personal brand by generating templates for their branding statement based on keywords.
 
+The home page takes a users name and allows the user to select key words. This produces the top 10 personal branding templates based on words chosen. The user can create their own templates as well as edit existing templates which are added to the public database. 
+
+All templates have a comments section, which allows users to up and down vote templates. User can add templates they create and like to their favorites.
 
 ## Wireframes
 HomePage
@@ -41,7 +45,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## React Component Hierarchy
 
-Define the the React components and the architectural design of your app.
+Define the React components and the architectural design of your app.
 
 ## Priority Matrix
 
