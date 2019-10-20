@@ -20,9 +20,8 @@ https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_2019
 
 
 ## API Snippet
-The user can create their own templates as well as edit existing templates which are added to the public database. 
+ 
 
-All templates have a comments section, which allows users to up and down vote templates. User can add templates they create and like to their favorites.
 
 #### MVP 
 
