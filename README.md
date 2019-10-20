@@ -1,16 +1,26 @@
-# Project Overview
-
-# Mike
-=======
-Amy
+## Project Overview
+ Interactive personal branding website that generates branding templates based on word selections. 
 
 ## Project Description
+This web application aims to help people design their personal brand by generating templates for their branding statement based on keywords.
+
 
 Sometimes we can't find the right words to describe ourselves. Brand.me is an app that helps solve problems for those who want to create a personal branding statement and need a little boost with word recommendations. Brand.me is a cross-platform development, this app runs on Android and IOS free to use. Users will be able to contribute, vote and comment on suggestions. One of the main features of the app lays within the logic functionality. We have tried and tested our algorithms and continue to find ways to imrove the app, that aims to help make your personal branding statement seamless. Our main feature is the ability to take in user input and apply logic that will build recommended words you may use, add to your list. These are the key takeaways from Brand.me application and we hope you enjoy and grow along with it. 
+The home page takes a users name and allows the user to select key words. This produces the top 10 personal branding templates based on words chosen. The user can create their own templates as well as edit existing templates which are added to the public database. 
+
+All templates have a comments section, which allows users to up and down vote templates. User can add templates they create and like to their favorites.
+
 
 ## Wireframes
+HomePage
+https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+Top 4 templates page 
+https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110656_aumh3e.jpg
+
+Create Template page
+https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110700_jrihrs.jpg
+
 
 ## API Snippet
 
@@ -38,7 +48,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## React Component Hierarchy
 
-Define the the React components and the architectural design of your app.
+Define the React components and the architectural design of your app.
 
 ## Priority Matrix
 
