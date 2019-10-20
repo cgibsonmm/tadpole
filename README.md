@@ -21,9 +21,6 @@ https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_2019
 
 ## API Snippet
 
-```
-Paste a snippet from your API here that shows the shape of the data
-```
 
 ### MVP/PostMVP - 5min
 
