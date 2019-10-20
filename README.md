@@ -4,9 +4,12 @@
 ## Project Description
 This web application aims to help people design their personal brand by generating templates for their branding statement based on keywords.
 
+
+Sometimes we can't find the right words to describe ourselves. Brand.me is an app that helps solve problems for those who want to create a personal branding statement and need a little boost with word recommendations. Brand.me is a cross-platform development, this app runs on Android and IOS free to use. Users will be able to contribute, vote and comment on suggestions. One of the main features of the app lays within the logic functionality. We have tried and tested our algorithms and continue to find ways to imrove the app, that aims to help make your personal branding statement seamless. Our main feature is the ability to take in user input and apply logic that will build recommended words you may use, add to your list. These are the key takeaways from Brand.me application and we hope you enjoy and grow along with it. 
 The home page takes a users name and allows the user to select key words. This produces the top 10 personal branding templates based on words chosen. The user can create their own templates as well as edit existing templates which are added to the public database. 
 
 All templates have a comments section, which allows users to up and down vote templates. User can add templates they create and like to their favorites.
+
 
 ## Wireframes
 HomePage
@@ -66,9 +69,20 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Project WireFrame | M | 2hrs | 0 | 0 |
+| Building ORM | M | 1hrs | 0 | 0 |
+| Building Server | H | 1hrs | 0 | 0 |
+| Adding Backend Routes | H | 2hrs| 0 | 0 |
+| Adding Controllers | H | 3hrs | 0 | 0 |
+| Building Models | H | 3hrs| 0 | 0 |
+| Creating User Stories | M | .5hrs | 0 | 0 |
+| Building Basic Frontend Structure | H | 2hrs | 0 | 0 | 
+| Building Froms | H | 3hrs | 0 | 0 |
+| Creating/Searching Seed Data | M | 1hrs | 0 | 0 |
+| Creating View Files for Routes | 4 hrs | 0 | 0 |
+| Styling | H | 4hrs | 0 | 0 | 
+| Unkown setbacks| H | 4hrs | 0 | 0 |
+| Total | H | 22.5hrs| 0 | 0 |
 
 
 ## Additional Libraries
