@@ -59,9 +59,20 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Project WireFrame | M | 2hrs | 0 | 0 |
+| Building ORM | M | 1hrs | 0 | 0 |
+| Building Server | H | 1hrs | 0 | 0 |
+| Adding Backend Routes | H | 2hrs| 0 | 0 |
+| Adding Controllers | H | 3hrs | 0 | 0 |
+| Building Models | H | 3hrs| 0 | 0 |
+| Creating User Stories | M | .5hrs | 0 | 0 |
+| Building Basic Frontend Structure | H | 2hrs | 0 | 0 | 
+| Building Froms | H | 3hrs | 0 | 0 |
+| Creating/Searching Seed Data | M | 1hrs | 0 | 0 |
+| Creating View Files for Routes | 4 hrs | 0 | 0 |
+| Styling | H | 4hrs | 0 | 0 | 
+| Unkown setbacks| H | 4hrs | 0 | 0 |
+| Total | H | 22.5hrs| 0 | 0 |
 
 
 ## Additional Libraries
