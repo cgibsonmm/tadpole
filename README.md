@@ -9,19 +9,13 @@ Sometimes we can't find the right words to describe ourselves. Brand.me is an ap
 
 
 ## Wireframes
-HomePage
-https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg
+![HomePage](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg)
 
 Top 4 templates page 
-https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110656_aumh3e.jpg
+![top_4](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110656_aumh3e.jpg)
 
 Create Template page
-https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110700_jrihrs.jpg
-
-
-## API Snippet
- 
-
+![create_table](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_20191019_110700_jrihrs.jpg)
 
 #### MVP 
 
@@ -38,20 +32,20 @@ https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498675/WireFrame/IMG_2019
 - Local storage for remembering favorites, votes and comments.
 - Additional section on Homepage for user to enter industry and state which will   appear at the bottom of templates they create or edit.
 
+## Priority Matrix
+
+![matrix1](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582466/Priority%20Matrix/IMG_20191018_153601_mehtgh.jpg)
+
+![matrix](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg)
 
 ## ERD Diagram
 
-- A diagram of your tables and how they relate to each other
+![orm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571663027/Project%203/IMG_3627_l8evo6.heic)
 
 ## React Component Hierarchy
 
 Define the React components and the architectural design of your app.
 
-## Priority Matrix
-
-https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582466/Priority%20Matrix/IMG_20191018_153601_mehtgh.jpg
-
-https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg
 
 
 ## Functional Components
