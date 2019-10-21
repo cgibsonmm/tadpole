@@ -9,7 +9,7 @@ Sometimes we can't find the right words to describe ourselves. Brand.me is an ap
 
 
 ## Wireframes
-![Gif](https://giphy.com/gifs/br-karneval-bayern-l3q2J6NeW24R3wau4)
+![Gif](https://media.giphy.com/media/l3q2J6NeW24R3wau4/giphy.gif)
 ![HomePage](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg)
 
 Top 4 templates page 
