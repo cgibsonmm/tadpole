@@ -40,7 +40,7 @@ Create Template page
 ![matrix](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg)
 
 ## ERD Diagram
-
+![joinorm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571671638/Project%203/IMG_3628_dw94gu.jpg)
 ![orm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571663027/Project%203/IMG_3627_l8evo6.heic)
 
 ## React Component Hierarchy
@@ -76,6 +76,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Adding Backend Routes | H | 4hrs| 0 | 0 |
 | Adding Controllers | H | 4hrs | 0 | 0 |
 | Building Models | H | 4hrs| 0 | 0 |
+| Building Join Tables | H | 4 hrs | 0 | 0 |
 | Creating User Stories | M | 2.5hrs | 0 | 0 |
 | Building Basic Frontend Structure | H | 4hrs | 0 | 0 | 
 | Building Froms | H | 3hrs | 0 | 0 |
@@ -87,21 +88,11 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Git conflicts | H | 3.5hrs | 0 | 0 |
 | Debugging | H | 4hrs | 0 | 0 |
 | Unkown setbacks| H | 4hrs | 0 | 0 |
-| Total | H | 56hrs| 0 | 0 |
+| Total | H | 60hrs| 0 | 0 |
 
 
 ## Additional Libraries
-Axios, React Router, Font
-
-## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+Axios, React Router, Font-awesome
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
