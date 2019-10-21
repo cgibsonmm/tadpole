@@ -47,7 +47,7 @@ Create Template page
 
 ## React Component Hierarchy
 
-![components](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571664234/Components/IMG_20191021_091659_pwmwhp.jpg)
+![components](https://res.cloudinary.com/drdk7a56d/image/upload/v1571679565/Project%203/20191021_133757_b1psmh.jpg)
 
 
 
