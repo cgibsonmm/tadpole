@@ -24,11 +24,11 @@ Create Template page
  - Create Template section where user can build their own template and save to 	   their favorites. 
  - Up and down vote system that decides top templates.
  - Top Templates section which displays top templates based on votes.
+ - Ability to edit suggested templates and save.
 
 #### PostMVP 
 
 - Comments section where users can make comments on templates. 
-- Ability to edit suggested templates and save.
 - Local storage for remembering favorites, votes and comments.
 - Additional section on Homepage for user to enter industry and state which will   appear at the bottom of templates they create or edit.
 
@@ -44,7 +44,7 @@ Create Template page
 
 ## React Component Hierarchy
 
-Define the React components and the architectural design of your app.
+https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571664234/Components/IMG_20191021_091659_pwmwhp.jpg
 
 
 
@@ -81,7 +81,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+Axios, React Router, Font
 
 ## Code Snippet
 
