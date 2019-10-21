@@ -10,6 +10,8 @@ This web application aims to help people design their personal brand by generati
 Sometimes we can't find the right words to describe ourselves. Brand.me is an app that helps solve problems for those who want to create a personal branding statement and need a little boost with word recommendations. Brand.me is a cross-platform development, this app runs on Android and IOS free to use. Users will be able to contribute, vote and comment on suggestions. One of the main features of the app lays within the logic functionality. We have tried and tested our algorithms and continue to find ways to imrove the app, that aims to help make your personal branding statement seamless. Our main feature is the ability to take in user input and apply logic that will build recommended words you may use, add to your list. These are the key takeaways from Brand.me application and we hope you enjoy and grow along with it. The home page takes a users name and allows the user to select key words. This produces the top 10 personal branding templates based on words chosen. The user can create their own templates as well as edit existing templates which are added to the public database.
 
 ## Wireframes
+![homepage](https://res.cloudinary.com/drdk7a56d/image/upload/v1571673495/Project%203/Screen_Shot_2019-10-21_at_11.56.29_AM_esgttu.png)
+![page](https://res.cloudinary.com/drdk7a56d/image/upload/v1571673498/Project%203/Screen_Shot_2019-10-21_at_11.56.37_AM_t12qou.png)
 ![HomePage](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg)
 
 Top 4 templates page 
@@ -40,7 +42,7 @@ Create Template page
 ![matrix](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg)
 
 ## ERD Diagram
-![joinorm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571671638/Project%203/IMG_3628_dw94gu.jpg)
+![joinorm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571678999/Project%203/Screen_Shot_2019-10-21_at_1.28.25_PM_ox8cbp.png)
 ![orm](https://res.cloudinary.com/drdk7a56d/image/upload/v1571663027/Project%203/IMG_3627_l8evo6.heic)
 
 ## React Component Hierarchy
