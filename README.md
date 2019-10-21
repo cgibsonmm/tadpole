@@ -51,8 +51,15 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description | 
 | --- | :---: |  
-| Header | This will render the header include the nav | 
-| Footer | This will render the footer include the nav | 
+
+| App	 | This will import dependencies, middleware   |
+| Nav | This will render the header include the nav | 
+| Footer | This will render the footer include the nav |
+| Home | This will render the Home page	all buttons to lists and create lists|
+| Create Template | This adds keywords to the database and lets you select item from list |
+| Favorites | Functions here will add  items to list of favorites, remove items and render items|
+| Delete | This will destroy  list items and return a success or throw an error|
+ Edit | This will put and render the change in the views.
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
