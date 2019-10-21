@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function LandingPage() {
+  const [keywords, setKeyWords] = useState([]);
+
+  useEffect(() => {
+    // Axios.get(URL)
+  }, [])
+
   return (
     <div className="home">
       <h1 className = 'title'>
