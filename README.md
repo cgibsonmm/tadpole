@@ -6,8 +6,6 @@ This web application aims to help people design their personal brand by generati
 
 Sometimes we can't find the right words to describe ourselves. Brand.me is an app that helps solve problems for those who want to create a personal branding statement and need a little boost with word recommendations. Brand.me is a cross-platform development, this app runs on Android and IOS free to use. Users will be able to contribute, vote and comment on suggestions. One of the main features of the app lays within the logic functionality. We have tried and tested our algorithms and continue to find ways to imrove the app, that aims to help make your personal branding statement seamless. Our main feature is the ability to take in user input and apply logic that will build recommended words you may use, add to your list. These are the key takeaways from Brand.me application and we hope you enjoy and grow along with it. The home page takes a users name and allows the user to select key words. This produces the top 10 personal branding templates based on words chosen. The user can create their own templates as well as edit existing templates which are added to the public database.
 
-
-
 ## Wireframes
 ![Gif](https://media.giphy.com/media/l3q2J6NeW24R3wau4/giphy.gif)
 ![HomePage](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571498674/WireFrame/IMG_20191019_110652_hi8vea.jpg)
@@ -66,24 +64,28 @@ Based on the initial logic defined in the previous sections try and breakdown th
 |Edit | This will put and render the change in the views.
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+## Time Frames
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Project WireFrame | M | 2hrs | 0 | 0 |
-| Building ORM | M | 1hrs | 0 | 0 |
-| Building Server | H | 1hrs | 0 | 0 |
-| Adding Backend Routes | H | 2hrs| 0 | 0 |
-| Adding Controllers | H | 3hrs | 0 | 0 |
-| Building Models | H | 3hrs| 0 | 0 |
-| Creating User Stories | M | .5hrs | 0 | 0 |
-| Building Basic Frontend Structure | H | 2hrs | 0 | 0 | 
+| Project WireFrame | M | 4hrs | 0 | 0 |
+| Building ORM | M | 2hrs | 0 | 0 |
+| Building Server | H | 2hrs | 0 | 0 |
+| Adding Backend Routes | H | 4hrs| 0 | 0 |
+| Adding Controllers | H | 4hrs | 0 | 0 |
+| Building Models | H | 4hrs| 0 | 0 |
+| Creating User Stories | M | 2.5hrs | 0 | 0 |
+| Building Basic Frontend Structure | H | 4hrs | 0 | 0 | 
 | Building Froms | H | 3hrs | 0 | 0 |
-| Creating/Searching Seed Data | M | 1hrs | 0 | 0 |
+| Creating/Searching Seed Data | M | 2.5hrs | 0 | 0 |
 | Creating View Files for Routes | 4 hrs | 0 | 0 |
-| Styling | H | 4hrs | 0 | 0 | 
+| Styling | H | 4hrs | 0 | 0 |
+| Desktop Design | M | 3hrs | 0 | 0 | 
+| Mobile Design | H | 4hrs | 0 | 0 |
+| Git conflicts | H | 3.5hrs | 0 | 0 |
+| Debugging | H | 4hrs | 0 | 0 |
 | Unkown setbacks| H | 4hrs | 0 | 0 |
-| Total | H | 22.5hrs| 0 | 0 |
+| Total | H | 56hrs| 0 | 0 |
 
 
 ## Additional Libraries
