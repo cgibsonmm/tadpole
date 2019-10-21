@@ -1,6 +1,40 @@
 .home {
-  text-align: center;
-  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.name {
+  width: 150px;
+}
+
+.pickbutton {
+  width: 100px;
+  margin: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+  margin: 40px;
+}
+
+.links {
+  text-decoration: none;
+  padding: 30px;
 }
 
 

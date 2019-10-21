@@ -12,19 +12,20 @@ export default function LandingPage() {
       <h1 className = 'title'>
         Tadpole
       </h1>
-      <h3>Enter name to start and select three key words</h3>
+      <h5>Enter name to start and select three key words</h5>
       <input type='text' className="name" placeholder="Eg Sally"/>
       <br/>
       <br/>
-      <button>Funny</button>
-      <button>Happy</button>
-      <button>Intelligent</button>
-      <button>Kind</button>
-      <button>Honest</button>
-      <br/>
-      <button>Creative</button>
-      <button>Driven</button>
-      <button>Leader</button>
+      <div className="buttons">
+      <button className="pickbutton">Funny</button>
+      <button className="pickbutton">Happy</button>
+      <button className="pickbutton">Intelligent</button>
+      <button className="pickbutton">Kind</button>
+      <button className="pickbutton">Honest</button>
+      <button className="pickbutton">Creative</button>
+      <button className="pickbutton">Driven</button>
+      <button className="pickbutton">Leader</button>
+      </div>
     </div>
   )
 }
