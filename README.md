@@ -32,6 +32,11 @@ Create Template page
 - Local storage for remembering favorites, votes and comments.
 - Additional section on Homepage for user to enter industry and state which will   appear at the bottom of templates they create or edit.
 
+## Priority Matrix
+
+![matrix1](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582466/Priority%20Matrix/IMG_20191018_153601_mehtgh.jpg)
+
+![matrix](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg)
 
 ## ERD Diagram
 
@@ -41,11 +46,6 @@ Create Template page
 
 Define the React components and the architectural design of your app.
 
-## Priority Matrix
-
-![matrix1](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582466/Priority%20Matrix/IMG_20191018_153601_mehtgh.jpg)
-
-![matrix](https://res.cloudinary.com/dqjtq6a2x/image/upload/v1571582467/Priority%20Matrix/IMG_20191018_153554_zddojk.jpg)
 
 
 ## Functional Components
