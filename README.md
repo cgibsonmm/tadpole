@@ -81,7 +81,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Building Basic Frontend Structure | H | 4hrs | 0 | 0 | 
 | Building Froms | H | 3hrs | 0 | 0 |
 | Creating/Searching Seed Data | M | 2.5hrs | 0 | 0 |
-| Creating View Files for Routes | M | 4hrs | 0 |
+| Creating View Files for Routes | M | 4hrs | 0 | 0 |
 | Styling | H | 4hrs | 0 | 0 |
 | Desktop Design | M | 3hrs | 0 | 0 | 
 | Mobile Design | H | 4hrs | 0 | 0 |
