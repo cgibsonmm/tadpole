@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from 'react'
+import ButtonList from './ButtonList';
+import NameForm from './NameForm';
 
 export default function LandingPage() {
+  // State
   const [keywords, setKeyWords] = useState([]);
+  const [name, setName] = useState('');
 
   useEffect(() => {
     // Axios.get(URL)
   }, [])
 
+  const handleInput = (e) => {
+    setName(e.target.value)
+  }
+
   return (
     <div className="home">
-      <h1 className = 'title'>
+      <h1 className='title'>
         Tadpole
       </h1>
       <h3>Enter name to start and select three key words</h3>
-      <input type='text' className="name" placeholder="Eg Sally"/>
-      <br/>
-      <br/>
-      <button>Funny</button>
-      <button>Happy</button>
-      <button>Intelligent</button>
-      <button>Kind</button>
-      <button>Honest</button>
-      <br/>
-      <button>Creative</button>
-      <button>Driven</button>
-      <button>Leader</button>
+      <NameForm handleInput={handleInput} />
+      <br />
+      <br />
+      <ButtonList />
     </div>
   )
 }
