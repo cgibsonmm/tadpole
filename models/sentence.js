@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     string: DataTypes.TEXT
   }, {});
   Sentence.associate = function (models) {
-    Sentence.belongsToMany(models.Sentence, {
+    Sentence.belongsToMany(models.Keyword, {
       through: 'KeywordSentence',
-      as: 'sentences'
+      as: 'sentenceId'
     })
   };
   return Sentence;

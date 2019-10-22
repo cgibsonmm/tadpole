@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   Keyword.associate = function (models) {
     // associations can be defined here
     Keyword.belongsToMany(models.Sentence, {
-      through: 'KeywordSenteces',
-      as: 'sentences'
+      through: 'KeywordSentences',
+      as: 'keywordId'
     })
   };
   return Keyword;
