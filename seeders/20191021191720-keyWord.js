@@ -2,38 +2,38 @@
 
 
 const words = [{
-  word:"Funny",
+  word: "Funny",
 },
 {
-  word:"Happy",
+  word: "Happy",
 },
 {
-  word:"Intelligent"
+  word: "Intelligent"
 },
 {
-  word:"Kind"
+  word: "Kind"
 },
 {
-  word:"Honest"
+  word: "Honest"
 },
 {
-  word:"Creative"
+  word: "Creative"
 },
 {
-  word:"Driven"
+  word: "Driven"
 },
 {
-  word:"leader"
+  word: "leader"
 }]
 
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-      return queryInterface.bulkInsert('Keywords', words, {});
+    return queryInterface.bulkInsert('Keywords', words, {});
   },
 
   down: (queryInterface, Sequelize) => {
 
-      return queryInterface.bulkDelete('Keywords', null, {});
+    return queryInterface.bulkDelete('Keywords', null, {});
   }
 }

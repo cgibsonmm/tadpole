@@ -1,18 +1,15 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('KeywordSentences', {
+    return queryInterface.createTable('Sentences', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      keyword_id: {
-        type: Sequelize.INTEGER
-      },
-      sentence_id: {
-        type: Sequelize.INTEGER
+      string: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -27,6 +24,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('KeywordSentences');
+    return queryInterface.dropTable('Sentences');
   }
 };

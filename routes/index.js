@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const routes = Router();
+const controllers = require('../controllers')
 
-routes.get('/', (req, res) => res.send('routefile'))
+routes.get('/', controllers.getAllKeywords)
 
 module.exports = routes;

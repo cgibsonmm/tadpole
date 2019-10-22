@@ -11,9 +11,6 @@ module.exports = {
       word: {
         type: Sequelize.STRING
       },
-      upvotes: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
