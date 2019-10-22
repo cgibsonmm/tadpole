@@ -6,7 +6,7 @@ const brandController = require('../controllers/brandStatement')
 const {BrandStatement, Sentence, Keyword} =  require('../models')
 
 
-routes.get('/', controllers.getAllKeywords)
+routes.get('/keywords', controllers.getAllKeywords)
 routes.post('/sentences', sentenceController.createSentence)
 routes.get('/brandstatements', brandController.getAllBrandStatements)
 
