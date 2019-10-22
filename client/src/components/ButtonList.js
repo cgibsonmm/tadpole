@@ -13,10 +13,11 @@ const keywords = [
 
 export default function ButtonList() {
   return (
-    <>
+    <div className="buttonsBox">
       {keywords.map((word, index) => (
         <button key={index} className="buttons">{word}</button>
       ))}
-    </>
+       </div>
   )
+ 
 }
