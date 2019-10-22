@@ -6,7 +6,9 @@ module.exports = (sequelize, DataTypes) => {
   Sentence.associate = function (models) {
     Sentence.belongsToMany(models.Keyword, {
       through: 'KeywordSentence',
-      as: 'sentenceId'
+      as: 'keywords',
+      foreignKey: 'sentenceId',
+      otherkey: 'keywordId'
     })
   };
   return Sentence;

@@ -1,14 +1,12 @@
-const { Keyword, KeywordSentences, Sentence } = require('../models')
+const { Keyword, KeywordSentence, Sentence } = require('../models')
 
 const getAllKeywords = async (req, res) => {
   try {
     const words = await Keyword.findAll({
       include: [{
         model: Sentence,
-        as: 'keywordId',
-        through: {
-          model: KeywordSentences
-        }
+        as: 'sentences',
+        attributes: ['string', 'id'],
       }]
     })
     res.json(words)
