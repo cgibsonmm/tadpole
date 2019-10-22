@@ -79,13 +79,18 @@ button:focus {
 
 .template-boxes {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   background-color: #ACDF87;
   height: 100vh;
 }
 
 .word-box {
+  width: 800px;
+  height: 150px;
+  margin: 30px;
+  box-shadow: 5px 10px #888888;
   background-color:rgb(118,186,27,0.45);
 }
 
