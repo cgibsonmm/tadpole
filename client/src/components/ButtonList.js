@@ -15,7 +15,7 @@ export default function ButtonList() {
   return (
     <>
       {keywords.map((word, index) => (
-        <button key={index}>{word}</button>
+        <button key={index} className="buttons">{word}</button>
       ))}
     </>
   )

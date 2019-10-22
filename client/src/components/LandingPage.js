@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ButtonList from './ButtonList';
 import NameForm from './NameForm';
+import picture from './tadpole.png'
 
 export default function LandingPage() {
   // State
@@ -17,6 +18,7 @@ export default function LandingPage() {
 
   return (
     <div className="home">
+      <img src={picture} className="tadpole"/>
       <h1 className='title'>
         Tadpole
       </h1>
