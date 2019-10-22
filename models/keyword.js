@@ -10,7 +10,13 @@ module.exports = (sequelize, DataTypes) => {
       as: 'sentences',
       foreignKey: 'keywordId',
       otherKey: 'sentenceId'
-    })
+    }),
+      Keyword.belongsToMany(models.BrandStatement, {
+        through: 'KeywordBrandStatment',
+        as: 'brandStatment',
+        foreignKey: 'keywordId',
+        otherKey: 'brandStatementId'
+      })
   };
   return Keyword;
 };
