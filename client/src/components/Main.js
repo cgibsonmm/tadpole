@@ -10,7 +10,6 @@ export default function Main() {
   return (
     <>
       {/* Routes */}
-      <Nav />
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/main" component={MainPage} />
