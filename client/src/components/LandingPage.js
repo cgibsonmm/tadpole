@@ -1,24 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import ButtonList from './ButtonList';
 import NameForm from './NameForm';
 import picture from './tadpole.png'
 
 export default function LandingPage() {
-  // State
-  const [keywords, setKeyWords] = useState([]);
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    // Axios.get(URL)
-  }, [])
+  const [userSelection, setUserSelection] = useState({
+    name: '',
+    keywords: [],
+    ready: false,
+  });
 
   const handleInput = (e) => {
-    setName(e.target.value)
+    let input = e.target.value
+    setUserSelection(prevState => ({
+      ...prevState,
+      name: input
+    }))
   }
+
+  const trackKeyWords = (arr) => {
+    let keyArr = arr;
+    setUserSelection(prevState => ({
+      ...prevState,
+      keywords: keyArr,
+      ready: true
+    }))
+  }
+
+  if (userSelection.ready && userSelection.name != '') {
+    return <Redirect to={{ pathname: '/main', state: userSelection }} />
+  }
+
+
 
   return (
     <div className="home">
-      <img src={picture} className="tadpole"/>
+      <img src={picture} className="tadpole" />
       <h1 className='title'>
         Tadpole
       </h1>
@@ -28,7 +46,7 @@ export default function LandingPage() {
       <br />
       <button className="submit">Submit</button>
       <br />
-      <ButtonList />
+      <ButtonList trackKeyWords={trackKeyWords} />
     </div>
   )
 }
