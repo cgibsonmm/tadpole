@@ -28,7 +28,7 @@ export default function LandingPage() {
     }))
   }
 
-  if (userSelection.ready) {
+  if (userSelection.ready && userSelection.name != '') {
     return <Redirect to={{ pathname: '/main', state: userSelection }} />
   }
 

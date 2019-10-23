@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
-export default function KeywordBtn({ button, addClicked }) {
+export default function KeywordBtn({ button, addClicked, sendLength }) {
   const [clicked, setClicked] = useState(false);
   const { word } = button;
 
   const handleClick = () => {
-    addClicked(button.id, !clicked)
-    setClicked(!clicked)
+    console.log(sendLength())
+    if (sendLength() <= 3) {
+      addClicked(button.id, !clicked)
+      setClicked(!clicked)
+    }
   }
 
   return (

@@ -17,13 +17,17 @@ export default function ButtonList({ trackKeyWords }) {
       arr = arr.filter(number => {
         return number != id
       })
-    } else {
+    } else if (arr.length < 3) {
       arr.push(id)
     }
     if (arr.length === 3) {
       trackKeyWords(arr)
     }
     setClickedArr(arr)
+  }
+
+  const sendLength = () => {
+    return clickedArr.length
   }
 
 
@@ -33,7 +37,7 @@ export default function ButtonList({ trackKeyWords }) {
     < div className="buttonsBox" >
       {
         keywords.map(button => (
-          <KeywordBtn key={button.id} button={button} addClicked={addClicked} />
+          <KeywordBtn key={button.id} button={button} addClicked={addClicked} sendLength={sendLength} />
         ))
       }
     </div >
