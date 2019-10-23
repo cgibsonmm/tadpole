@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Nav from './sharedComponents/Nav';
+import CreateStatement from './CreateStatement'
 import Axios from 'axios';
 
 
@@ -45,14 +46,8 @@ export default function MainPage({ location }) {
         <Nav />
       </div>
       <div className="template-boxes">
-        {console.log(data)}
-        {data.map(statment => (
-          <div key={statment.id} className="word-box">
-            <p className="box-text">
-              {statment.statement.join(' ')}
-            </p>
-            <button className="edit-button">Edit</button>
-          </div>
+        {data.map(statement => (
+          <CreateStatement key={statement.id} statement={statement} />
         ))}
       </div>
     </>
