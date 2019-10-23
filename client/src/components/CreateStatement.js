@@ -4,8 +4,8 @@ export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState('')
-
-  const handleClick = () => {
+  
+  const handleClick = (e) => {
     setToggle(!toggle)
   }
 
@@ -25,12 +25,12 @@ export default function CreateStatement({ statement }) {
     console.log(statement)
 
   }
+ 
 
   if (toggle) {
     return (
-      <div><form><textarea onChange={handleInput} type="text" value={text} />
-        <button onClick={handleClick}>save</button>
-      </form>
+      <div><textarea onChange={handleInput} type ="text" value={text}/>
+      <button onClick={handleClick}>save</button>
       </div>
     )
   }
@@ -38,10 +38,9 @@ export default function CreateStatement({ statement }) {
   return (
     <div key={statement.id} className="word-box">
       <p className="box-text">
-        {formatTextFormatSubmit()}
-        {statement.statement.join(' ')}
+        {text}
       </p>
-      <button onClick={handleClick} className="edit-button">Edit</button>
+      <button  onClick={handleClick} className="edit-button" value={text}>Edit</button>
     </div>
   )
 }
