@@ -117,19 +117,22 @@ routes.delete("/keyword/:id", async (req, res) => {
   }
 })
 
-routes.get(`/altkeywords/`, async (req,res) =>{
-  try {
-    // console.log(req)
-    let result = {}
-    req.keywords.forEach(item => { 
-        let result = Sentence.findAll({
-        where: item 
-      })}
-      
-      )
 
-  } catch (error) {
-  }
+routes.get('/allsentenceswithkeyword', async (req, res) => {
+  let response = {}
+  req.keywords.forEach((key, inx) => {
+    try {
+      let keyword = Keyword.findByPk(key)
+      response[inx] = keyword.getSentences()
+    }
+    catch (error) {
+      console.log(error)
+    }
+    res.json(response)
+
+    // const keyword = await Keyword.findByPk(1)
+    // res.json(await keyword.getSentences())
+  })
 })
 
 module.exports = routes;

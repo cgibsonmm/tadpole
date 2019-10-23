@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
-export default function KeywordBtn({ button, addClicked, sendLength }) {
+export default function KeywordBtn({ button, addClicked, clickedArr }) {
+  console.log(clickedArr)
   const [clicked, setClicked] = useState(false);
   const { word } = button;
 
   const handleClick = () => {
-    console.log(sendLength())
-    if (sendLength() <= 3) {
+    if (clickedArr.length < 3 || clickedArr.includes(button.id)) {
       addClicked(button.id, !clicked)
       setClicked(!clicked)
     }

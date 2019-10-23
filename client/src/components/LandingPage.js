@@ -11,24 +11,25 @@ export default function LandingPage() {
     ready: false,
   });
 
-  const handleInput = (e) => {
-    let input = e.target.value
+  const handleInput = (name) => {
+    let input = name
     setUserSelection(prevState => ({
       ...prevState,
       name: input
     }))
   }
 
+  /// when everything is ready to send this changes false to true
   const trackKeyWords = (arr) => {
     let keyArr = arr;
     setUserSelection(prevState => ({
       ...prevState,
       keywords: keyArr,
-      ready: true
     }))
   }
 
-  if (userSelection.ready && userSelection.name != '') {
+  // if ready ready redirect
+  if (userSelection.name !== '' && userSelection.keywords.length === 3) {
     return <Redirect to={{ pathname: '/main', state: userSelection }} />
   }
 
@@ -40,10 +41,11 @@ export default function LandingPage() {
       <h1 className='title'>
         Tadpole
       </h1>
+
       <h5>let us help you find your personal brand</h5>
       <h4>Enter name to start and select 3 key words</h4>
       <NameForm handleInput={handleInput} />
-      <button className="submit">Submit</button>
+      {userSelection.name}
       <br />
       <br />
       <ButtonList trackKeyWords={trackKeyWords} />
