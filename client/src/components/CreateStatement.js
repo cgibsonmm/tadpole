@@ -3,8 +3,10 @@ import React,{useState} from 'react'
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
-  const handleClick = () => {
+
+  const handleClick = (e) => {
     setToggle(!toggle)
+
   }
 
   const handleInput = (e) => {
@@ -12,12 +14,14 @@ export default function CreateStatement({ statement }) {
     setText(currentInput)
   }
 
+ 
+
 
   if(toggle){
     return (
-      <div><form><textarea onChange={handleInput} type ="text" value={text}/>
+      <div><textarea onChange={handleInput} type ="text" value={text}/>
       <button onClick={handleClick}>save</button>
-      </form>
+      
       </div>
       
     )
@@ -26,9 +30,9 @@ export default function CreateStatement({ statement }) {
   return (
     <div key={statement.id} className="word-box">
       <p className="box-text">
-        {statement.statement.join(' ')}
+        {text}
       </p>
-      <button  onClick={handleClick} className="edit-button">Edit</button>
+      <button  onClick={handleClick} className="edit-button" value={text}>Edit</button>
     </div>
   )
 }
