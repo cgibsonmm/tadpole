@@ -117,4 +117,19 @@ routes.delete("/keyword/:id", async (req, res) => {
   }
 })
 
+routes.get(`/altkeywords/`, async (req,res) =>{
+    try {
+      console.log(req)
+      let result = {}
+      req.keywords.forEach(item => 
+        Sentence.findAll({
+          include: []
+        })
+        )
+  
+    } catch (error) {
+      console.log('')
+    }
+  })
+
 module.exports = routes;

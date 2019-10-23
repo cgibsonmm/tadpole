@@ -23,8 +23,11 @@ export default function MainPage({ location }) {
       </div>
       <div className="template-boxes">
         {data.map(template => (
-          <div key={template.id} className="box1" className="word-box">
+          <div key={template.id} className="word-box">
+            <p className="box-text">
             {template.string}
+            </p>
+            <button className="edit-button">Edit</button>
           </div>
         ))}
       </div>
