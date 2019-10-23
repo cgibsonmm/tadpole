@@ -79,14 +79,15 @@ button:focus {
 
 .template-boxes {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   background-color: #ACDF87;
-  height: 100vh;
 }
 
 .word-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 800px;
   height: 150px;
   margin: 30px;
@@ -94,6 +95,10 @@ button:focus {
   -webkit-box-shadow: 3px 3px 5px 6px #888888;
   box-shadow:         3px 3px 5px 6px #888888;
   background-color:rgb(118,186,27,0.45);
+}
+
+.box-text {
+  margin: 20px;
 }
 
 h4 {
@@ -115,5 +120,36 @@ h4 {
   width: 120px;
   text-align: center;
 }
+
+.submit {
+  border-radius: 30px;
+  width: 90px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.edit-button {
+  height: 20px;
+  width: 60px;
+  margin: 10px;
+}
+
+@media (max-width: 414px) {
+.nav  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  background-color: rgb(30, 86, 49);
+  width: 0 auto;
+}
+.links {
+  text-decoration: none;
+  padding: 30px;
+  width: 60px;
+}
+
+}
+
 
 

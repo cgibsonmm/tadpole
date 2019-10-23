@@ -47,6 +47,7 @@ export default function LandingPage() {
       <NameForm handleInput={handleInput} />
       {userSelection.name}
       <br />
+      <button className="submit">Submit</button>
       <br />
       <ButtonList trackKeyWords={trackKeyWords} />
     </div>

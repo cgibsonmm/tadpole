@@ -7,9 +7,9 @@ export default function Nav() {
     <header>
       <div className="nav">
       <Link to="/" className="links">Home</Link>
-      <Link to="/" className="links">Create Template</Link>
-      <Link to="/" className="links">Favorites</Link>
-      <Link to="/" className="links">Top Templates</Link>
+      <Link to="/createtemplate" className="links">Create Template</Link>
+      <Link to="/favorites" className="links">Favorites</Link>
+      <Link to="/toptemplates" className="links">Top Templates</Link>
       </div>
     </header>
   )
