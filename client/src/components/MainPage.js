@@ -6,14 +6,37 @@ import Axios from 'axios';
 
 export default function MainPage({ location }) {
   const { state } = location;
-  console.log(state)
+  const toPass = state.keywords
+
   const [data, setData] = useState([])
 
   useEffect(() => {
-    Axios.get('api/sentences')
-      .then(res => setData(res.data))
+    Axios.get(`api/allsentenceswithkeyword/${toPass}`, {
+      params: toPass
+    })
+      .then(res => formatSentences(res.data))
       .catch(e => console.log(e.message))
   }, [])
+
+  const formatSentences = (resData) => {
+    const statements = [{
+      id: 1,
+      statement: []
+    }, {
+      id: 2,
+      statement: []
+    }, {
+      id: 3,
+      statement: []
+    }]
+    resData.forEach((item, index) => {
+      item.forEach((i, idx) => {
+        console.log(i)
+        statements[idx].statement.push(`${state.name} ${i.string}.`)
+      })
+    })
+    setData(statements)
+  }
 
 
   return (
@@ -22,10 +45,11 @@ export default function MainPage({ location }) {
         <Nav />
       </div>
       <div className="template-boxes">
-        {data.map(template => (
-          <div key={template.id} className="word-box">
+        {console.log(data)}
+        {data.map(statment => (
+          <div key={statment.id} className="word-box">
             <p className="box-text">
-            {template.string}
+              {statment.statement.join(' ')}
             </p>
             <button className="edit-button">Edit</button>
           </div>
