@@ -3,7 +3,7 @@ const routes = Router();
 const controllers = require('../controllers')
 const sentenceController = require('../controllers/sentences')
 const brandController = require('../controllers/brandStatement')
-const { BrandStatement, Sentence, Keyword } = require('../models')
+const { BrandStatement, Sentence, Keyword, KeywordSentences } = require('../models')
 
 
 routes.get('/keywords', controllers.getAllKeywords)
@@ -114,6 +114,21 @@ routes.delete("/keyword/:id", async (req, res) => {
   }
   catch (err) {
     return res.json(err)
+  }
+})
+
+routes.get(`/altkeywords/`, async (req,res) =>{
+  try {
+    // console.log(req)
+    let result = {}
+    req.keywords.forEach(item => { 
+        let result = Sentence.findAll({
+        where: item 
+      })}
+      
+      )
+
+  } catch (error) {
   }
 })
 

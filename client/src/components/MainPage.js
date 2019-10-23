@@ -5,12 +5,15 @@ import Axios from 'axios';
 
 
 export default function MainPage({ location }) {
+  console.log(location)
   const { state } = location;
-  console.log(state)
+  console.log(state.keywords)
   const [data, setData] = useState([])
 
   useEffect(() => {
-    Axios.get('api/sentences')
+    Axios.get('api/altkeywords',{
+      keywords: state.keywords
+    })
       .then(res => setData(res.data))
       .catch(e => console.log(e.message))
   }, [])
