@@ -48,7 +48,7 @@ export default function MainPage({ location }) {
         {console.log(data)}
         {data.map(statment => (
           <div key={statment.id} className="word-box">
-            <p className="box-text">
+                        <p className="box-text">
               {statment.statement.join(' ')}
             </p>
             <button className="edit-button">Edit</button>
