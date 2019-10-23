@@ -116,4 +116,16 @@ h4 {
   text-align: center;
 }
 
+.submit {
+  border-radius: 30px;
+  width: 90px;
+  height: 30px;
+  font-size: 20px;
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  
+  
+}
+
 
