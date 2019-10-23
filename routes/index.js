@@ -3,7 +3,7 @@ const routes = Router();
 const controllers = require('../controllers')
 const sentenceController = require('../controllers/sentences')
 const brandController = require('../controllers/brandStatement')
-const { BrandStatement, Sentence, Keyword } = require('../models')
+const { BrandStatement, Sentence, Keyword, KeywordSentences } = require('../models')
 
 
 routes.get('/keywords', controllers.getAllKeywords)
