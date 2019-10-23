@@ -29,6 +29,7 @@ export default function CreateStatement({ statement }) {
     setSavedText(statement)
   }
 
+
   if (toggle) {
     return (
       <div><textarea onChange={handleInput} type="text" value={text} />
