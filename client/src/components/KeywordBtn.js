@@ -4,11 +4,17 @@ export default function KeywordBtn({ button, addClicked }) {
   const [clicked, setClicked] = useState(false);
   const { word } = button;
 
-  const handleClick = (e) => {
+  const handleClick = () => {
+    addClicked(button.id, !clicked)
     setClicked(!clicked)
-    addClicked(button.id)
   }
+
   return (
-    <button onClick={handleClick} className={clicked ? 'buttons clicked' : 'buttons'}>{word}</button>
+    <button
+      onClick={handleClick}
+      className={clicked ? 'buttons clicked' : 'buttons'}
+    >
+      {word}
+    </button>
   )
 }

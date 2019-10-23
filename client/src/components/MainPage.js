@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from './sharedComponents/Nav';
+import Axios from 'axios';
 
 
-export default function MainPage() {
+
+export default function MainPage({ location }) {
+  const { state } = location;
+  console.log(state)
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    Axios.get('api/sentences')
+      .then(res => setData(res.data))
+      .catch(e => console.log(e.message))
+  }, [])
+
+
   return (
     <>
-   <div className="head">
-      <Nav />
-    </div>
-    <div className="template-boxes">
-      <div className="box1" className="word-box">
-        Top Template 1
+      <div className="head">
+        <Nav />
       </div>
-      <div className="box2" className="word-box">
-        Top Template 2
+      <div className="template-boxes">
+        {data.map(template => (
+          <div key={template.id} className="box1" className="word-box">
+            {template.string}
+          </div>
+        ))}
       </div>
-      <div className="box3" className="word-box">
-        Top Template 3
-      </div>
-      <div className="box4" className="word-box">
-        Top Template 4
-      </div>
-    </div>
     </>
   )
 }
