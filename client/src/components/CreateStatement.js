@@ -1,12 +1,12 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
+  const [savedText, setSavedText] = useState([])
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     setToggle(!toggle)
-
   }
 
   const handleInput = (e) => {
@@ -14,17 +14,28 @@ export default function CreateStatement({ statement }) {
     setText(currentInput)
   }
 
- 
+  const handleSaveClick = () => {
+    handleClick()
+    formatTextFormatSubmit(text)
+  }
+
+  const formatTextFormatSubmit = (text) => {
+    let statement = text.split('. ')
+    statement = statement.map(sentence => {
+      let arr = sentence.split(' ')
+      arr.shift()
+      return `I ${arr.join(' ')}`
+    })
+    setSavedText(statement)
+  }
 
 
-  if(toggle){
+  if (toggle) {
     return (
       <div>
       <textarea className="create-template" onChange={handleInput} type ="text" value={text}/>
       <button onClick={handleClick}>save</button>
-      
-      </div>
-      
+     </div>
     )
   }
 
@@ -33,7 +44,7 @@ export default function CreateStatement({ statement }) {
       <p className="box-text">
         {text}
       </p>
-      <button  onClick={handleClick} className="edit-button" value={text}>Edit</button>
+      <button onClick={handleClick} className="edit-button" value={text}>Edit</button>
     </div>
   )
 }
