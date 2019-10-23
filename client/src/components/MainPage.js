@@ -7,16 +7,7 @@ import Axios from 'axios';
 export default function MainPage({ location }) {
   console.log(location)
   const { state } = location;
-<<<<<<< HEAD
-  console.log(state.keywords)
-  const [data, setData] = useState([])
 
-  useEffect(() => {
-    Axios.get('api/altkeywords',{
-      keywords: state.keywords
-    })
-      .then(res => setData(res.data))
-=======
   const toPass = state.keywords
 
   const [data, setData] = useState([])
@@ -26,7 +17,6 @@ export default function MainPage({ location }) {
       params: toPass
     })
       .then(res => formatSentences(res.data))
->>>>>>> 658bb441425edfba1703fb832c9de7b627c6c42b
       .catch(e => console.log(e.message))
   }, [])
 
