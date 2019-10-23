@@ -135,10 +135,26 @@ h4 {
 }
 
 .create-template {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 800px;
-  height: 100px;
+  height: 150px;
+  resize: none;
 }
+
+.template-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body {
+  background-color:rgb(118,186,27,0.45);
+  height: 100vh;
+}
+
+.save-button
+
 
 @media (max-width: 414px) {
 .nav  {

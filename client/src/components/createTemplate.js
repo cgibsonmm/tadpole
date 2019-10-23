@@ -5,7 +5,12 @@ export default function createTemplate() {
     return(
         <>
         <Nav />
-    <textarea className="create-template">Welcome</textarea>
+        <body className="body">
+        <div className="template-body">
+    <textarea className="create-template" placeholder="Enter text here"></textarea>
+    <button className="save-button">Save</button>
+    </div>
+    </body>
     </>
     )
 }
