@@ -5,7 +5,9 @@ export default function Favorties() {
     return(
         <>
         <Nav />
+        <body className="body">
     <div>favorites</div>
+    </body>
     </>
     )
 }

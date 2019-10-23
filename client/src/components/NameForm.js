@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import TopTemplates from './TopTemplates'
 
 export default function NameForm({ handleInput }) {
   const [name, setName] = useState('')
@@ -14,9 +15,12 @@ export default function NameForm({ handleInput }) {
   }
 
   return (
+    <>
     <form>
       <input onChange={handleNameInput} value={name} type='text' className="name" placeholder="Eg Sally" />
-      <button type='submit' onClick={handleSubmit}>Set Name</button>
+      <button type='submit' onClick={handleSubmit} className="submit">Set Name
+    </button>
     </form>
+    </>
   )
 }
