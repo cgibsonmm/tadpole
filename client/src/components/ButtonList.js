@@ -20,24 +20,16 @@ export default function ButtonList({ trackKeyWords }) {
     } else if (arr.length < 3) {
       arr.push(id)
     }
-    if (arr.length === 3) {
-      trackKeyWords(arr)
-    }
+    // sends array up as props
+    trackKeyWords(arr)
     setClickedArr(arr)
   }
-
-  const sendLength = () => {
-    return clickedArr.length
-  }
-
-
-
 
   return (
     < div className="buttonsBox" >
       {
         keywords.map(button => (
-          <KeywordBtn key={button.id} button={button} addClicked={addClicked} sendLength={sendLength} />
+          <KeywordBtn key={button.id} button={button} addClicked={addClicked} clickedArr={clickedArr} />
         ))
       }
     </div >
