@@ -6,7 +6,9 @@ export default function TopTemplates() {
     return(
         <>
         <Nav />
+        <body className="body">
     <div>TopTemplate</div>
+    </body>
     </>
     )
 }
