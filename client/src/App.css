@@ -90,7 +90,9 @@ button:focus {
   width: 800px;
   height: 150px;
   margin: 30px;
-  box-shadow: 5px 10px #888888;
+  -moz-box-shadow:    3px 3px 5px 6px #888888;
+  -webkit-box-shadow: 3px 3px 5px 6px #888888;
+  box-shadow:         3px 3px 5px 6px #888888;
   background-color:rgb(118,186,27,0.45);
 }
 
@@ -102,6 +104,16 @@ h4 {
 
 .clicked {
   background-color:#A4DE02;
+}
+
+.links{
+  color: white;
+  background-color: rgb(118,186,27,0.45);
+  margin: 20px;
+  border-radius: 30px;
+  color:rgb(20, 58, 33);
+  width: 120px;
+  text-align: center;
 }
 
 
