@@ -19,7 +19,8 @@ export default function CreateStatement({ statement }) {
 
   if(toggle){
     return (
-      <div><textarea onChange={handleInput} type ="text" value={text}/>
+      <div>
+      <textarea className="create-template" onChange={handleInput} type ="text" value={text}/>
       <button onClick={handleClick}>save</button>
       
       </div>

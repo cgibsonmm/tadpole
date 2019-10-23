@@ -169,6 +169,16 @@ h4 {
   font-size: 40px;
 }
 
+.create-template {
+  width: 800px;
+  height: 150px;
+  margin: 30px;
+  -moz-box-shadow:    3px 3px 5px 6px #888888;
+  -webkit-box-shadow: 3px 3px 5px 6px #888888;
+  box-shadow:         3px 3px 5px 6px #888888;
+  background-color:rgb(118,186,27,0.45);
+}
+
 /* a:link {
   background: url('./components/kisspng-water-lily-free-content-clip-art-lily-pad-picture-5a89b0f6276911.3226148015189731741614\ \(1\).png');
   background-size: contain;
