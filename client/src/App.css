@@ -134,6 +134,12 @@ h4 {
   margin: 10px;
 }
 
+.create-template {
+  margin-top: 100px;
+  width: 800px;
+  height: 100px;
+}
+
 @media (max-width: 414px) {
 .nav  {
   display: flex;

@@ -5,7 +5,7 @@ export default function createTemplate() {
     return(
         <>
         <Nav />
-    <form>Welcome</form>
+    <textarea className="create-template">Welcome</textarea>
     </>
     )
 }
