@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
-  const [savedText, setSavedText] = useState('')
+  const [savedText, setSavedText] = useState([])
 
   const handleClick = () => {
     setToggle(!toggle)
@@ -14,23 +14,25 @@ export default function CreateStatement({ statement }) {
     setText(currentInput)
   }
 
-  const formatTextFormatSubmit = () => {
-    const text = 'corey is always in good spirits and looking on the bright side. corey is perceived by many as highly intelligent and well articulated. corey is a considerate person who always thinks about how his/her actions affect others.';
+  const handleSaveClick = () => {
+    handleClick()
+    formatTextFormatSubmit(text)
+  }
+
+  const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
     statement = statement.map(sentence => {
       let arr = sentence.split(' ')
       arr.shift()
       return `I ${arr.join(' ')}`
     })
-    console.log(statement)
-
+    setSavedText(statement)
   }
 
   if (toggle) {
     return (
-      <div><form><textarea onChange={handleInput} type="text" value={text} />
-        <button onClick={handleClick}>save</button>
-      </form>
+      <div><textarea onChange={handleInput} type="text" value={text} />
+        <button onClick={handleSaveClick}>save</button>
       </div>
     )
   }
@@ -38,10 +40,9 @@ export default function CreateStatement({ statement }) {
   return (
     <div key={statement.id} className="word-box">
       <p className="box-text">
-        {formatTextFormatSubmit()}
-        {statement.statement.join(' ')}
+        {text}
       </p>
-      <button onClick={handleClick} className="edit-button">Edit</button>
+      <button onClick={handleClick} className="edit-button" value={text}>Edit</button>
     </div>
   )
 }
