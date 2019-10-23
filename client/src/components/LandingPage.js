@@ -45,7 +45,9 @@ export default function LandingPage() {
       <h5>let us help you find your personal brand</h5>
       <h4>Enter name to start and select 3 key words</h4>
       <NameForm handleInput={handleInput} />
+      <div className="user-name">
       {userSelection.name}
+      </div>
       <br />
       {/* <button className="submit">Submit</button> */}
       <br />
