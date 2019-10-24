@@ -1,11 +1,13 @@
 const express = require('express');
-
+const cors = require('cors')
 const app = express();
 const PORT = process.env.PORT || 3001;
 const routes = require('./routes')
 
-
+app.use(cors())
 app.use(express.json())
+
+
 const path = require('path')
 
 app.get('/', (req, res) => res.send('hello'))
