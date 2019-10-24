@@ -158,4 +158,23 @@ routes.post('/createbrandstatement', async (req, res) => {
   })
     .catch(e => console.log(e))
 })
+
+routes.get('/brandstatement/:id', (req, res) => {
+  let id = req.params.id
+  BrandStatement.findByPk(id)
+    .then(statement => res.json(statement))
+    .catch(e => res.json(e))
+})
+
+routes.put('/brandstatement/:id', (req, res) => {
+  let id = req.params.id
+  let statement = req.body.statement
+  BrandStatement.update(req.body, {
+    where: {
+      id: id
+    },
+  })
+    .then(statement => res.json(statement))
+    .catch(e => res.json(e))
+})
 module.exports = routes;
