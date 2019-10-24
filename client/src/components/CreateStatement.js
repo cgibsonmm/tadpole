@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import picture from '../img/pencil.png';
+import arrowup from '../img/up.png'
+import arrowdown from '../img/down.png'
 
 export default function CreateStatement({ statement, keywords }) {
   const [toggle, setToggle] = useState(false);
@@ -80,6 +82,8 @@ export default function CreateStatement({ statement, keywords }) {
         {text}
       </p>
       <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
+      <img src={arrowup} className="arrow"></img>
+      <img src={arrowdown}className="arrow"></img>
     </div>
   )
 }
