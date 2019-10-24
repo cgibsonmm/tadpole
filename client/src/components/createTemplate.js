@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Nav from './sharedComponents/Nav';
 import ButtonList from './ButtonList';
 
-export default function CreateTemplate({ handleSaveClick, trackWords }) {
+function CreateTemplate({ handleSaveClick, trackWords }) {
   const [input, setInput] = useState('')
   const handleInput = (e) => {
     let string = e.target.value;
@@ -32,3 +32,5 @@ export default function CreateTemplate({ handleSaveClick, trackWords }) {
     </div>
   )
 }
+
+export default CreateTemplate;
