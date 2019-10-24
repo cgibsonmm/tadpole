@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from './sharedComponents/Nav';
-import picture from '../img/pencil.png';
+import WordBox from './sharedComponents/WordBox'
+import Axios from 'axios';
 
 
 export default function TopTemplates() {
-    return(
-        <>
-        <Nav />
-        <body className="body">
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    Axios.get('/api/brandstatements')
+      .then(res => setData(res.data))
+  }, [])
+
+  return (
+    <>
+      <Nav />
+      <body className="body">
         <div className="template-boxes">
-        <div className="word-box">
-        <img className="edit-button" src={picture}></img>
-            </div>
-            </div>
-            </body>
+          {data.map(statement => (
+            <WordBox key={statement.id} statement={statement} />
+          ))}
+        </div>
+      </body>
     </>
-    )
+  )
 }
