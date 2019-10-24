@@ -8,6 +8,8 @@ export default function CreateStatement({ statement, keywords }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
+  const [count, setCount] = useState(0)
+  console.log(count)
 
   const handleClick = () => {
     setToggle(!toggle)
@@ -43,6 +45,7 @@ export default function CreateStatement({ statement, keywords }) {
   }
 
 
+
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
     let formattedStatement = statement.map(sentence => {
@@ -76,6 +79,9 @@ export default function CreateStatement({ statement, keywords }) {
     )
   }
 
+
+
+
   return (
     <body className='ipad-body'>
     <div className="stack-statement">
@@ -87,8 +93,8 @@ export default function CreateStatement({ statement, keywords }) {
     </div>
     <div className='direct-arrows'>
       <p className='vote'>Vote</p>
-      <img src={arrowup} className="arrow"></img>
-      <img src={arrowdown} className="arrow"></img>
+      <img onClick={() => setCount(count + 1)} src={arrowup} className="arrow"></img>
+      <img onClick={() => setCount(count - 1)} src={arrowdown} className="arrow"></img>
     </div>
     </div>
     </body>
