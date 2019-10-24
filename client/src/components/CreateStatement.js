@@ -77,13 +77,20 @@ export default function CreateStatement({ statement, keywords }) {
   }
 
   return (
+    <body className='ipad-body'>
+    <div className="stack-statement">
     <div key={statement.id} className="word-box">
       <p className="box-text">
         {text}
       </p>
       <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
-      <img src={arrowup} className="arrow"></img>
-      <img src={arrowdown}className="arrow"></img>
     </div>
+    <div className='direct-arrows'>
+      <p className='vote'>Vote</p>
+      <img src={arrowup} className="arrow"></img>
+      <img src={arrowdown} className="arrow"></img>
+    </div>
+    </div>
+    </body>
   )
 }

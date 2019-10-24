@@ -222,8 +222,24 @@ flex-direction: column;
 .arrow {
   width: 20px;
   height: 20px;
+  margin: 10px;
 }
 
+.stack-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.direct-arrows {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.vote {
+  color:rgb(20, 58, 33);
+}
 
 @media (max-width: 600px) {
 .nav  {
@@ -259,9 +275,9 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 300px;
-  height: 150px;
-  margin: 40px;
+  width: 250px;
+  height: 450px;
+  margin: 30px;
   -moz-box-shadow:    3px 3px 5px 6px #888888;
   -webkit-box-shadow: 3px 3px 5px 6px #888888;
   box-shadow:         3px 3px 5px 6px #888888;
@@ -376,5 +392,11 @@ flex-direction: column;
   .word-box {
     margin-top: 80px;
   }
+
+  .ipad-body {
+    background-color: #ACDF87;
+    height: 100%;
+  }
+
 }
 
