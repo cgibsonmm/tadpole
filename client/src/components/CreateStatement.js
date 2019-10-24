@@ -71,10 +71,9 @@ function myStorage() {
 
   if (toggle) {
     return (
-      <div>
-
+      <div className="edit-box">
         <textarea className="create-template" onChange={handleInput} type="text" value={text} />
-        <button onClick={handleSaveClick}>save</button>
+        <button className='save-edit' onClick={handleSaveClick}>save</button>
       </div>
 
     )

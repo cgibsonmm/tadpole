@@ -190,6 +190,19 @@ h4 {
   margin-right: 30px;
 }
 
+.edit-box {
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.save-edit {
+  border-radius: 30px;
+  width: 110px;
+  height: 30px;
+  font-size: 15px;
+}
+
 /* a:link {
   background: url('./components/kisspng-water-lily-free-content-clip-art-lily-pad-picture-5a89b0f6276911.3226148015189731741614\ \(1\).png');
   background-size: contain;
