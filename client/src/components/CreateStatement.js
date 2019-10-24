@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import Axios from 'axios'
+import Axios from 'axios';
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
+
+  // const [item, setItem] = useLocalStorage('name', 'Initial Value');
+
   const handleClick = () => {
     setToggle(!toggle)
     myStorage();
@@ -22,6 +25,7 @@ function myStorage() {
   const handleSaveClick = () => {
     handleClick()
     formatTextFormatSubmit(text)
+    // setItem(text)
   }
 
   function useLocalStorage(key, initialValue) {
