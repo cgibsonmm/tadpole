@@ -24,7 +24,6 @@ export default function BuildStatement() {
   }
 
   const postStatement = (text) => {
-    console.log(text, sendData.keywords, 'fjl;kdja;flksjd')
     Axios.post('/api/createbrandstatement', {
       keywords: sendData.keywords,
       statement: text

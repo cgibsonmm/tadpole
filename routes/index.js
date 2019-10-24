@@ -7,10 +7,8 @@ const { BrandStatement, Sentence, Keyword, KeywordSentences, KeywordBrandStateme
 
 
 routes.get('/keywords', controllers.getAllKeywords)
-// routes.post('/sentences', sentenceController.createSentence)
 routes.get('/brandstatements', brandController.getAllBrandStatements)
 
-// routes.get('/brandstatements/:id', brandController.findBrandStatementById)
 
 
 routes.get("/brandstatements/:id", async (req, res) => {
@@ -168,7 +166,7 @@ routes.get('/brandstatement/:id', (req, res) => {
 
 routes.put('/brandstatement/:id', (req, res) => {
   let id = req.params.id
-  let statement = req.body.statement
+  let statement = req.body.statement;
   BrandStatement.update(req.body, {
     where: {
       id: id
@@ -176,5 +174,11 @@ routes.put('/brandstatement/:id', (req, res) => {
   })
     .then(statement => res.json(statement))
     .catch(e => res.json(e))
+})
+
+routes.get('/mybrands/:body', (req, res) => {
+  let keywords = req.params.id;
+  res.send(keyword)
+  console.log(keywords)
 })
 module.exports = routes;

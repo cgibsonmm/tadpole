@@ -16,11 +16,6 @@ const findBrandStatementById = (req, res) => {
 }
 
 
-
-
-
-
-
 module.exports = {
   getAllBrandStatements,
   findBrandStatementById
