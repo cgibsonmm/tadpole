@@ -3,8 +3,6 @@ import Nav from './sharedComponents/Nav';
 import CreateStatement from './CreateStatement'
 import Axios from 'axios';
 
-
-
 export default function MainPage({ location }) {
   console.log(location)
   const { state } = location;

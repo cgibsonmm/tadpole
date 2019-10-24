@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import CreateTemplate from './createTemplate'
+
+import { Redirect } from 'react-router-dom';
+import CreateTemplate from './CreateTemplate'
 import ButtonList from './ButtonList';
 import Axios from 'axios';
 
 export default function BuildStatement() {
   const [selectedArr, setSelectedArr] = useState([])
-  const [statement, setStatement] = useState('')
+  const [res, setRes] = useState([])
+  const [resSaved, setResSaved] = useState(false)
   const [sendData, setSendData] = useState({
-    valid: false,
     statement: '',
     keywords: []
   })
-
-
 
   const trackKeyWords = (arr) => {
     let currentArr = arr
@@ -23,16 +23,30 @@ export default function BuildStatement() {
     }))
   }
 
-  //TODO: need to change this 
   const handleSaveClick = (text) => {
-    console.log('here')
+    let length = text.split('').length
+    setSendData(data => ({
+      ...data,
+      statement: text,
+    }))
+    postStatement()
+  }
 
+  const postStatement = () => {
     Axios.post('/api/createbrandstatement', {
-      keywords: selectedArr,
-      statement: text
+      keywords: sendData.keywords,
+      statement: sendData.statement
     })
-      .then(res => console.log(res))
+      .then(res => {
+        setRes(res.data)
+        setResSaved(true)
+      })
 
+      .catch(e => console.log(e))
+  }
+
+  if (resSaved) {
+    return <Redirect to={{ pathname: `/mybrandstatement/${res.id}`, state: res }} />
   }
 
   return (
@@ -41,3 +55,4 @@ export default function BuildStatement() {
     </div>
   )
 }
+
