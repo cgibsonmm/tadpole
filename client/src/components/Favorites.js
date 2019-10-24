@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Nav from './sharedComponents/Nav';
 import Axios from 'axios';
+import picture from '../img/pencil.png';
 
 export default function Favorties({ location }) {
   const [data, setData] = useState([])
@@ -55,7 +56,7 @@ export default function Favorties({ location }) {
         <div className="template-boxes">
           <div className="word-box">
             {data.statement}
-            <button onClick={handleEditClick} className="edit-button">Edit</button>
+            <img onClick={handleEditClick} className="edit-button" src={picture}></img>
           </div>
         </div>
       </body>
