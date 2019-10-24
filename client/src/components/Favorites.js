@@ -66,6 +66,7 @@ export default function Favorties({ location }) {
             {data.statement}
             <img onClick={handleEditClick} className="edit-button" src={picture}></img>
           </div>
+          <button className="delete-button">Delete</button>
         </div>
       </body>
 
