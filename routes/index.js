@@ -3,7 +3,7 @@ const routes = Router();
 const controllers = require('../controllers')
 const sentenceController = require('../controllers/sentences')
 const brandController = require('../controllers/brandStatement')
-const { BrandStatement, Sentence, Keyword, KeywordSentences } = require('../models')
+const { BrandStatement, Sentence, Keyword, KeywordSentences, KeywordBrandStatement } = require('../models')
 
 
 routes.get('/keywords', controllers.getAllKeywords)
@@ -131,5 +131,31 @@ routes.get('/allsentenceswithkeyword/:body', (req, res) => {
       })
     })
   })
+})
+
+routes.post('/createbrandstatement', async (req, res) => {
+  let params = req.body;
+  let statement = params.statement
+  let keywords = params.keywords
+  let created = []
+
+  // console.log({ req.body }
+  BrandStatement.create({
+    statement: statement
+  }).then(newStatement => {
+    keywords.forEach(keyword => {
+      let obj = {
+        brandstatement_id: newStatement.id,
+        keyword_id: keyword
+      }
+      KeywordBrandStatement.create(obj).then(r => {
+        created.push(r)
+        if (created.length === 3) {
+          res.json(newStatement)
+        }
+      })
+    })
+  })
+    .catch(e => console.log(e))
 })
 module.exports = routes;

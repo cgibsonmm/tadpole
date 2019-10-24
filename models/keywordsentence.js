@@ -1,15 +1,15 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const KeywordSentence = sequelize.define('KeywordSentence', {
-    keywordId: DataTypes.UUID,
-    sentenceId: DataTypes.UUID
+    keyword_id: DataTypes.UUID,
+    sentence_id: DataTypes.UUID
   }, {});
   KeywordSentence.associate = function (models) {
     KeywordSentence.belongsTo(models.Keyword, {
-      foreignKey: 'keywordId'
+      foreignKey: 'keyword_id'
     })
     KeywordSentence.belongsTo(models.Sentence, {
-      foreignKey: 'sentenceId'
+      foreignKey: 'sentence_id'
     })
   };
   return KeywordSentence;
