@@ -9,7 +9,7 @@ export default function Favorties({ location }) {
   const [editOpen, setEditOpen] = useState(false);
 
   useEffect(() => {
-    if (location.state.id) {
+    if (location.state) {
       Axios.get(`/api/brandstatement/${location.state.id}`)
         .then(res => {
           setData(res.data)
