@@ -5,10 +5,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   BrandStatement.associate = function (models) {
     BrandStatement.belongsToMany(models.Keyword, {
-      through: 'KeywordBrandStatement',
-      as: 'keywords',
-      foreignKey: 'brandstatementId',
-      otherkey: 'keywordId'
+      through: 'KeywordBrandStatements',
+      foreignKey: 'brandstatement_id',
+      // otherkey: 'KeywordId'
     })
   };
   return BrandStatement;

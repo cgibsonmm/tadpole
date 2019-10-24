@@ -33,8 +33,6 @@ export default function LandingPage() {
     return <Redirect to={{ pathname: '/main', state: userSelection }} />
   }
 
-
-
   return (
     <div className="home">
       <img src={picture} className="tadpole" />
@@ -46,10 +44,9 @@ export default function LandingPage() {
       <h4>Enter name to start and select 3 key words</h4>
       <NameForm handleInput={handleInput} />
       <div className="user-name">
-      {userSelection.name}
+        {userSelection.name}
       </div>
       <br />
-      {/* <button className="submit">Submit</button> */}
       <br />
       <ButtonList trackKeyWords={trackKeyWords} />
     </div>

@@ -2,11 +2,12 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import MainPage from './MainPage';
-import createTemplate from './createTemplate';
+import CreateTemplate from './CreateTemplate';
 import Favorites from './Favorites'
 import NotFound from './sharedComponents/NotFound'
 import Footer from './sharedComponents/Footer';
 import TopTemplates from './TopTemplates';
+import BuildStatement from './BuildStatement';
 
 export default function Main() {
   return (
@@ -15,9 +16,10 @@ export default function Main() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/main" component={MainPage} />
-        <Route exact path="/createtemplate" component={createTemplate} />
+        <Route exact path="/createtemplate" component={CreateTemplate} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/toptemplates" component={TopTemplates} />
+        <Route exact path="/build-brand-statment" component={BuildStatement} />
       </Switch>
     </>
   )
