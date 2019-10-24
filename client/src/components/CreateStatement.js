@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
-// import picture from '../img/pencil-icon-';
+import picture from '../img/pencil.png';
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
@@ -71,10 +71,9 @@ function myStorage() {
 
   if (toggle) {
     return (
-      <div>
-
+      <div className="edit-box">
         <textarea className="create-template" onChange={handleInput} type="text" value={text} />
-        <button onClick={handleSaveClick}>save</button>
+        <button className='save-edit' onClick={handleSaveClick}>save</button>
       </div>
 
     )
@@ -85,7 +84,7 @@ function myStorage() {
       <p className="box-text">
         {text}
       </p>
-      <button onClick={handleClick} className="edit-button" value={text}>Edit</button>
+      <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
     </div>
   )
 }

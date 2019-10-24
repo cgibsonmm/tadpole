@@ -5,12 +5,12 @@ import {Link} from "react-router-dom";
 
 export default function Nav() {
   return (
-    <header>
+    <header className="head">
       <div className="nav">
-      <Link to="/" className="links">Home</Link>
-      <Link to="/createtemplate" className="links">Create Template</Link>
-      <Link to="/favorites" className="links">Favorites</Link>
-      <Link to="/toptemplates" className="links">Top Templates</Link>
+      <Link to="/" className="links"><p className="home-nav">Home</p></Link>
+      <Link to="/createtemplate" className="links"><p className="home-nav">Create Template</p></Link>
+      <Link to="/favorites" className="links"><p className="home-nav">Favorites</p></Link>
+      <Link to="/toptemplates" className="links"><p className="home-nav">Top Templates</p></Link>
       </div>
     </header>
   )
