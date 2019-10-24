@@ -20,6 +20,7 @@ export default function ButtonList({ trackWords }) {
     } else if (arr.length < 3) {
       arr.push(id)
     }
+    console.log('here')
     trackWords(arr)
     setClickedArr(arr)
   }

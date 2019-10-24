@@ -2,21 +2,14 @@ import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import picture from '../img/pencil.png';
 
-export default function CreateStatement({ statement }) {
+export default function CreateStatement({ statement, keywords }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
 
-  // const [item, setItem] = useLocalStorage('name', 'Initial Value');
-
   const handleClick = () => {
     setToggle(!toggle)
-    myStorage();
   }
-
-function myStorage() {
-
-}
 
   const handleInput = (e) => {
     const currentInput = e.target.value
@@ -26,24 +19,26 @@ function myStorage() {
   const handleSaveClick = () => {
     handleClick()
     formatTextFormatSubmit(text)
-    // setItem(text)
-  }
 
-  function useLocalStorage(key, initialValue) {
-    // State to store our value
-    // Pass initial state function to useState so logic is only executed once
-    const [storedValue, setStoredValue] = useState(() => {
-      try {
-        // Get from local storage by key
-        const item = window.localStorage.getItem(key);
-        // Parse stored json or if none return initialValue
-        return item ? JSON.parse(item) : initialValue;
-      } catch (error) {
-        // If error also return initialValue
-        console.log(error);
-        return initialValue;
-      }
-    })}
+    Axios.post('/api/createbrandstatement', {
+      statement: text,
+      keywords: keywords
+    })
+      .then(res => {
+        let myId = res.data.id;
+        if (localStorage) {
+          let myStatements;
+          if (!localStorage['myStatements']) myStatements = [];
+          else myStatements = JSON.parse(localStorage['myStatements'])
+          if (!(myStatements instanceof Array)) myStatements = [];
+          if (!myStatements.includes(myId)) myStatements.push(myId);
+
+          localStorage.setItem('myStatements', JSON.stringify(myStatements))
+        }
+        /// Code above was partialy from
+        /// https://stackoverflow.com/questions/48133909/array-push-is-not-working-for-local-storage
+      });
+  }
 
 
   const formatTextFormatSubmit = (text) => {

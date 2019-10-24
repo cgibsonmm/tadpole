@@ -20,7 +20,7 @@ export default function LandingPage() {
   }
 
   /// when everything is ready to send this changes false to true
-  const trackKeyWords = (arr) => {
+  const trackWords = (arr) => {
     let keyArr = arr;
     setUserSelection(prevState => ({
       ...prevState,
@@ -48,7 +48,7 @@ export default function LandingPage() {
       </div>
       <br />
       <br />
-      <ButtonList trackKeyWords={trackKeyWords} />
+      <ButtonList trackWords={trackWords} />
     </div>
   )
 }

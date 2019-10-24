@@ -47,7 +47,7 @@ export default function MainPage({ location }) {
       </div>
       <div className="template-boxes">
         {data.map(statement => (
-          <CreateStatement key={statement.id} statement={statement} myKeyWords={data} />
+          <CreateStatement key={statement.id} statement={statement} myKeyWords={data} keywords={toPass} />
         ))}
       </div>
     </>

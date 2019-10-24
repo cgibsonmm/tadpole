@@ -9,11 +9,13 @@ export default function Favorties({ location }) {
   const [editOpen, setEditOpen] = useState(false);
 
   useEffect(() => {
-    Axios.get(`/api/brandstatement/${location.state.id}`)
-      .then(res => {
-        setData(res.data)
-        setInput(res.data.statement)
-      })
+    if (location.state.id) {
+      Axios.get(`/api/brandstatement/${location.state.id}`)
+        .then(res => {
+          setData(res.data)
+          setInput(res.data.statement)
+        })
+    }
   }, [])
 
   const handleInput = (e) => {
