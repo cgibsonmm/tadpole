@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from 'react'
 import useLocalStorage from 'react-use-localstorage';
+import Axios from 'axios';
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
@@ -21,8 +21,9 @@ export default function CreateStatement({ statement }) {
   const handleSaveClick = () => {
     handleClick()
     formatTextFormatSubmit(text)
-    setItem(text)}
+    setItem(text)
   }
+
 
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
