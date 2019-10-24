@@ -22,9 +22,13 @@ export default function CreateTemplate({ handleSaveClick, trackKeyWords }) {
         <body className="body">
           <div className="template-body">
             <textarea onChange={handleInput} value={input} className="create-template" placeholder="Enter text here"></textarea>
-            <button onClick={handleClick} className="save-button">Save</button>
-          </div>
+            <p className='instructions'>
+        Write out your written statement inside the box and select three key words associated to your statement.
+        Click the save button once you're happy with your statement and word choices.
+      </p>
           <ButtonList trackKeyWords={trackKeyWords} />
+          <button onClick={handleClick} className="save-button">Save</button>
+          </div>
         </body>
       </>
     </div>

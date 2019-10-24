@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import useLocalStorage from 'react-use-localstorage';
 import Axios from 'axios';
 
 export default function CreateStatement({ statement }) {
@@ -7,7 +6,7 @@ export default function CreateStatement({ statement }) {
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
 
-  const [item, setItem] = useLocalStorage('name', 'Initial Value');
+  // const [item, setItem] = useLocalStorage('name', 'Initial Value');
 
   const handleClick = () => {
     setToggle(!toggle)
@@ -21,7 +20,7 @@ export default function CreateStatement({ statement }) {
   const handleSaveClick = () => {
     handleClick()
     formatTextFormatSubmit(text)
-    setItem(text)
+    // setItem(text)
   }
 
 
