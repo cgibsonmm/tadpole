@@ -12,7 +12,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "database": "tadpole_db_production",
+    "use_env_variable": "tadpole_db_production",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": true
