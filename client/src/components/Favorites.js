@@ -6,7 +6,11 @@ export default function Favorties() {
         <>
         <Nav />
         <body className="body">
-    <div>favorites</div>
+        <div className="template-boxes">
+        <div className="word-box">
+        <button className="edit-button">Edit</button>
+            </div>
+            </div>
     </body>
     </>
     )
