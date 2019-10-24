@@ -5,6 +5,7 @@ import Axios from 'axios';
 
 
 
+
 export default function MainPage({ location }) {
   console.log(location)
   const { state } = location;
