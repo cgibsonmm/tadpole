@@ -9,7 +9,7 @@ app.use(express.json())
 
 const path = require('path')
 
-app.get('/', (req, res) => res.send('hello'))
+// app.g('/api', (req, res) => res.send('hello'))
 app.use('/api', routes)
 
 app.use(express.static(path.join(__dirname, 'client/build')));
