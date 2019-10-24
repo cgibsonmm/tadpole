@@ -64,6 +64,12 @@ button:focus {
   flex-wrap: wrap;
   color: white;
   background-color: rgb(30, 86, 49);
+  height: 160px;
+  margin-left: 30px
+}
+
+.head {
+  background-color: rgb(30, 86, 49);
 }
 
 .links {
@@ -116,13 +122,23 @@ h4 {
 
 .links{
   color: white;
-  background-color: rgb(118,186,27,0.45);
+  /* background-color: rgb(118,186,27,0.45); */
+  background-image: url('./img/lilly.png');
+  background-size: 145px 120px;
+  background-repeat: no-repeat;
   margin: 20px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   color:rgb(20, 58, 33);
-  width: 120px;
+  width: 100px;
   text-align: center;
 
+}
+
+.home-nav {
+  margin-top: 23px;
+  margin-right: 20px;
+  font-size: 20px;
+  /* text-align: center; */
 }
 
 .submit {
@@ -179,7 +195,7 @@ h4 {
   -moz-box-shadow:    3px 3px 5px 6px #888888;
   -webkit-box-shadow: 3px 3px 5px 6px #888888;
   box-shadow:         3px 3px 5px 6px #888888;
-  background-color:rgb(118,186,27,0.45);
+  background-color:rgb(197, 224, 197);
 }
 
 .instructions {
@@ -200,7 +216,7 @@ flex-direction: column;
   border-radius: 30px;
   width: 110px;
   height: 30px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* a:link {
