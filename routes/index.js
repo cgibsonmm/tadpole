@@ -7,10 +7,8 @@ const { BrandStatement, Sentence, Keyword, KeywordSentences, KeywordBrandStateme
 
 
 routes.get('/keywords', controllers.getAllKeywords)
-// routes.post('/sentences', sentenceController.createSentence)
 routes.get('/brandstatements', brandController.getAllBrandStatements)
 
-// routes.get('/brandstatements/:id', brandController.findBrandStatementById)
 
 
 routes.get("/brandstatements/:id", async (req, res) => {
