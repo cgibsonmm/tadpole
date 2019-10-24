@@ -7,8 +7,12 @@ export default function TopTemplates() {
         <>
         <Nav />
         <body className="body">
-    <div>TopTemplate</div>
-    </body>
+        <div className="template-boxes">
+        <div className="word-box">
+        <button className="edit-button">Edit</button>
+            </div>
+            </div>
+            </body>
     </>
     )
 }
