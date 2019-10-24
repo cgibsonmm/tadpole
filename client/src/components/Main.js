@@ -20,6 +20,7 @@ export default function Main() {
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/toptemplates" component={TopTemplates} />
         <Route exact path="/build-brand-statment" component={BuildStatement} />
+        <Route exact path="/mybrandstatement/:id" component={Favorites} />
       </Switch>
     </>
   )
