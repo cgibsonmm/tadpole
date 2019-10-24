@@ -10,7 +10,12 @@ export default function CreateStatement({ statement }) {
 
   const handleClick = () => {
     setToggle(!toggle)
+    myStorage();
   }
+
+function myStorage() {
+
+}
 
   const handleInput = (e) => {
     const currentInput = e.target.value
@@ -23,6 +28,22 @@ export default function CreateStatement({ statement }) {
     // setItem(text)
   }
 
+  function useLocalStorage(key, initialValue) {
+    // State to store our value
+    // Pass initial state function to useState so logic is only executed once
+    const [storedValue, setStoredValue] = useState(() => {
+      try {
+        // Get from local storage by key
+        const item = window.localStorage.getItem(key);
+        // Parse stored json or if none return initialValue
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        // If error also return initialValue
+        console.log(error);
+        return initialValue;
+      }
+    })}
+
 
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
@@ -33,6 +54,7 @@ export default function CreateStatement({ statement }) {
     })
     setSavedText(formattedStatement)
   }
+
 
   useEffect(() => {
     if (savedText.length === 3) {
@@ -45,12 +67,15 @@ export default function CreateStatement({ statement }) {
       .then(res => console.log(res.data))
   }
 
+
   if (toggle) {
     return (
       <div>
+
         <textarea className="create-template" onChange={handleInput} type="text" value={text} />
         <button onClick={handleSaveClick}>save</button>
       </div>
+
     )
   }
 
