@@ -13,8 +13,9 @@
   },
   "production": {
     "database": "tadpole_db_production",
-    "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "dialectOptions": {
+      "ssl": true
+    }
   }
 }
