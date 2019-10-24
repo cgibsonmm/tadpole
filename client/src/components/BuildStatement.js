@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CreateTemplate from './CreateTemplate'
+import CreateTemplate from './createTemplate'
 import ButtonList from './ButtonList';
 import Axios from 'axios';
 
