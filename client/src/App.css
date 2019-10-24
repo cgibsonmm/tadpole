@@ -219,12 +219,6 @@ flex-direction: column;
   font-size: 20px;
 }
 
-/* a:link {
-  background: url('./components/kisspng-water-lily-free-content-clip-art-lily-pad-picture-5a89b0f6276911.3226148015189731741614\ \(1\).png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  } */
-
 
 @media (max-width: 600px) {
 .nav  {
@@ -234,11 +228,27 @@ flex-direction: column;
   color: white;
   background-color: rgb(30, 86, 49);
   margin: 0 auto;
+  height: 60px;
 }
-.links {
+/* .links {
   text-decoration: none;
   padding: 30px;
-  width: 60px;
+  width: 75px;
+} */
+
+.links{
+  color: white;
+  /* background-color: rgb(118,186,27,0.45); */
+  background-image: url('./img/lilly.png');
+  background-size: 110px 90px;
+  background-repeat: no-repeat;
+  margin: 20px;
+  /* border-radius: 30px; */
+  color:rgb(20, 58, 33);
+  width: 50px;
+  height: 60px;
+  text-align: center;
+
 }
 .word-box {
   display: flex;
@@ -246,12 +256,53 @@ flex-direction: column;
   justify-content: space-between;
   width: 300px;
   height: 150px;
-  margin: 30px;
+  margin: 40px;
   -moz-box-shadow:    3px 3px 5px 6px #888888;
   -webkit-box-shadow: 3px 3px 5px 6px #888888;
   box-shadow:         3px 3px 5px 6px #888888;
   background-color:rgb(118,186,27,0.45);
 }
+
+.create-template {
+  width: 90%;
+  height: 150px;
+  margin: 30px;
+  -moz-box-shadow:    3px 3px 5px 6px #888888;
+  -webkit-box-shadow: 3px 3px 5px 6px #888888;
+  box-shadow:         3px 3px 5px 6px #888888;
+  background-color:rgb(197, 224, 197);
+}
+
+.body {
+  background-color: #ACDF87;
+  height: 100%;
+}
+
+.save-button {
+  border-radius: 30px;
+  width: 90px;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.head {
+  background-color: rgb(30, 86, 49);
+  height: 300px;
+}
+
+.home-nav {
+  margin-top: 10px;
+  margin-right: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.body {
+  background-color: #ACDF87;
+  height: 100vh;
+}
+
 
 }
 
@@ -273,6 +324,52 @@ flex-direction: column;
     text-decoration: none;
     padding: 30px;
     width: 60px;
+  }
+
+  .create-template {
+    width: 90%;
+    height: 150px;
+    margin: 30px;
+    -moz-box-shadow:    3px 3px 5px 6px #888888;
+    -webkit-box-shadow: 3px 3px 5px 6px #888888;
+    box-shadow:         3px 3px 5px 6px #888888;
+    background-color:rgb(197, 224, 197);
+  }
+
+  .nav  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(30, 86, 49);
+    margin: 0 auto;
+    height: 170px;
+  }
+
+  .links{
+    color: white;
+    /* background-color: rgb(118,186,27,0.45); */
+    background-image: url('./img/lilly.png');
+    background-size: 110px 110px;
+    background-repeat: no-repeat;
+    margin: 20px;
+    /* border-radius: 30px; */
+    color:rgb(20, 58, 33);
+    width: 50px;
+    height: 60px;
+    text-align: center;
+  
+  }
+
+  .home-nav {
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .word-box {
+    margin-top: 80px;
   }
 }
 
