@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
@@ -42,24 +43,35 @@ function myStorage() {
 
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
-    statement = statement.map(sentence => {
+    let formattedStatement = statement.map(sentence => {
       let arr = sentence.split(' ')
       arr.shift()
       return `I ${arr.join(' ')}`
     })
-    setSavedText(statement)
+    setSavedText(formattedStatement)
   }
 
-  
 
+  useEffect(() => {
+    if (savedText.length === 3) {
+      saveStatement()
+    }
+  }, [savedText])
+
+  const saveStatement = () => {
+    Axios.get('/api/keywords')
+      .then(res => console.log(res.data))
+  }
 
 
   if (toggle) {
     return (
       <div>
-      <textarea className="create-template" onChange={handleInput} type ="text" value={text}/>
-      <button onClick={handleSaveClick}>save</button>
-     </div>
+
+        <textarea className="create-template" onChange={handleInput} type="text" value={text} />
+        <button onClick={handleSaveClick}>save</button>
+      </div>
+
     )
   }
 

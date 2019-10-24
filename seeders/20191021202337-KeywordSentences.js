@@ -3,100 +3,100 @@
 
 const sentences = [
     {
-        sentenceId: 1,
-        keywordId: 1
+        sentence_id: 1,
+        keyword_id: 1
     },
     {
-        sentenceId: 2,
-        keywordId: 1
+        sentence_id: 2,
+        keyword_id: 1
     },
     {
-        sentenceId: 3,
-        keywordId: 1
+        sentence_id: 3,
+        keyword_id: 1
     },
     {
-        sentenceId: 4,
-        keywordId: 2
+        sentence_id: 4,
+        keyword_id: 2
     },
     {
-        sentenceId: 5,
-        keywordId: 2
+        sentence_id: 5,
+        keyword_id: 2
     },
     {
-        sentenceId: 6,
-        keywordId: 2
+        sentence_id: 6,
+        keyword_id: 2
     },
     {
-        sentenceId: 7,
-        keywordId: 3
+        sentence_id: 7,
+        keyword_id: 3
     },
     {
-        sentenceId: 8,
-        keywordId: 3
+        sentence_id: 8,
+        keyword_id: 3
     },
     {
-        sentenceId: 9,
-        keywordId: 3
+        sentence_id: 9,
+        keyword_id: 3
     },
     {
-        sentenceId: 10,
-        keywordId: 4
+        sentence_id: 10,
+        keyword_id: 4
     },
     {
-        sentenceId: 11,
-        keywordId: 4
+        sentence_id: 11,
+        keyword_id: 4
     },
     {
-        sentenceId: 12,
-        keywordId: 4
+        sentence_id: 12,
+        keyword_id: 4
     },
     {
-        sentenceId: 13,
-        keywordId: 5
+        sentence_id: 13,
+        keyword_id: 5
     },
     {
-        sentenceId: 14,
-        keywordId: 5
+        sentence_id: 14,
+        keyword_id: 5
     },
     {
-        sentenceId: 15,
-        keywordId: 5
+        sentence_id: 15,
+        keyword_id: 5
     },
     {
-        sentenceId: 16,
-        keywordId: 6
+        sentence_id: 16,
+        keyword_id: 6
     },
     {
-        sentenceId: 17,
-        keywordId: 6
+        sentence_id: 17,
+        keyword_id: 6
     },
     {
-        sentenceId: 18,
-        keywordId: 6
+        sentence_id: 18,
+        keyword_id: 6
     },
     {
-        sentenceId: 19,
-        keywordId: 7
+        sentence_id: 19,
+        keyword_id: 7
     },
     {
-        sentenceId: 20,
-        keywordId: 7
+        sentence_id: 20,
+        keyword_id: 7
     },
     {
-        sentenceId: 21,
-        keywordId: 7
+        sentence_id: 21,
+        keyword_id: 7
     },
     {
-        sentenceId: 22,
-        keywordId: 8
+        sentence_id: 22,
+        keyword_id: 8
     },
     {
-        sentenceId: 23,
-        keywordId: 8
+        sentence_id: 23,
+        keyword_id: 8
     },
     {
-        sentenceId: 24,
-        keywordId: 8
+        sentence_id: 24,
+        keyword_id: 8
     }];
 
 
