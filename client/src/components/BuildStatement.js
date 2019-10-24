@@ -14,28 +14,20 @@ export default function BuildStatement() {
     keywords: []
   })
 
-  const trackKeyWords = (arr) => {
-    let currentArr = arr
-    setSelectedArr(currentArr)
-    setSendData(data => ({
-      ...data,
-      keywords: currentArr
-    }))
-  }
-
   const handleSaveClick = (text) => {
     let length = text.split('').length
     setSendData(data => ({
       ...data,
       statement: text,
     }))
-    postStatement()
+    postStatement(text)
   }
 
-  const postStatement = () => {
+  const postStatement = (text) => {
+    console.log(text, sendData.keywords, 'fjl;kdja;flksjd')
     Axios.post('/api/createbrandstatement', {
       keywords: sendData.keywords,
-      statement: sendData.statement
+      statement: text
     })
       .then(res => {
         setRes(res.data)
@@ -45,13 +37,21 @@ export default function BuildStatement() {
       .catch(e => console.log(e))
   }
 
-  if (resSaved) {
-    return <Redirect to={{ pathname: `/mybrandstatement/${res.id}`, state: res }} />
+  const trackWords = (arr) => {
+    console.log('helloi')
+    let currentArr = arr
+    setSelectedArr(currentArr)
+    setSendData(data => ({
+      ...data,
+      keywords: currentArr
+    }))
   }
-
+  if (resSaved) {
+    return <Redirect to={{ pathname: `/favorites`, state: res }} />
+  }
   return (
     <div>
-      <CreateTemplate handleSaveClick={handleSaveClick} trackKeyWords={trackKeyWords} />
+      <CreateTemplate handleSaveClick={handleSaveClick} trackWords={trackWords} />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import ButtonList from './ButtonList';
 import NameForm from './NameForm';
-import picture from '../img/tadpole.png';
+import picture from '../img/tadpole.png'
 
 export default function LandingPage() {
   const [userSelection, setUserSelection] = useState({

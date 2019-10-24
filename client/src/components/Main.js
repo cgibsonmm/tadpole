@@ -16,7 +16,7 @@ export default function Main() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/main" component={MainPage} />
-        <Route exact path="/createtemplate" component={CreateTemplate} />
+        <Route exact path="/createtemplate" component={BuildStatement} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/toptemplates" component={TopTemplates} />
         <Route exact path="/build-brand-statment" component={BuildStatement} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios'
 import KeywordBtn from './KeywordBtn';
 
-export default function ButtonList({ trackKeyWords }) {
+export default function ButtonList({ trackWords }) {
   const URL = 'api/keywords'
   const [keywords, setKeywords] = useState([])
   const [clickedArr, setClickedArr] = useState([])
@@ -20,8 +20,7 @@ export default function ButtonList({ trackKeyWords }) {
     } else if (arr.length < 3) {
       arr.push(id)
     }
-    // sends array up as props
-    trackKeyWords(arr)
+    trackWords(arr)
     setClickedArr(arr)
   }
 
@@ -34,5 +33,4 @@ export default function ButtonList({ trackKeyWords }) {
       }
     </div >
   )
-
 }
