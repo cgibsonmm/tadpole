@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './sharedComponents/Nav';
+import picture from '../img/pencil.png';
 
 export default function Favorties() {
     return(
@@ -8,7 +9,7 @@ export default function Favorties() {
         <body className="body">
         <div className="template-boxes">
         <div className="word-box">
-        <button className="edit-button">Edit</button>
+        <img className="edit-button" src={picture}></img>
             </div>
             </div>
     </body>

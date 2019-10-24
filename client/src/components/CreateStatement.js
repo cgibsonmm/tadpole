@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
-// import picture from '../img/pencil-icon-';
+import picture from '../img/pencil.png';
 
 export default function CreateStatement({ statement }) {
   const [toggle, setToggle] = useState(false);
@@ -85,7 +85,7 @@ function myStorage() {
       <p className="box-text">
         {text}
       </p>
-      <button onClick={handleClick} className="edit-button" value={text}>Edit</button>
+      <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
     </div>
   )
 }
