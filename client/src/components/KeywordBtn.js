@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 export default function KeywordBtn({ button, addClicked, clickedArr }) {
-  console.log(clickedArr)
   const [clicked, setClicked] = useState(false);
   const { word } = button;
 

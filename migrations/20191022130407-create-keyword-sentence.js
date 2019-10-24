@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      keywordId: {
+      keyword_id: {
         type: Sequelize.INTEGER
       },
-      sentenceId: {
+      sentence_id: {
         type: Sequelize.INTEGER
       },
       createdAt: {

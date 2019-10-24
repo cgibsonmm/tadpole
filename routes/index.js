@@ -133,21 +133,28 @@ routes.get('/allsentenceswithkeyword/:body', (req, res) => {
   })
 })
 
-
 routes.post('/createbrandstatement', async (req, res) => {
   let params = req.body;
   let statement = params.statement
-  let keyword = 1
+  let keywords = params.keywords
+  let created = []
 
   // console.log({ req.body }
   BrandStatement.create({
     statement: statement
   }).then(newStatement => {
-    let obj = {
-      brandstatement_id: newStatement.id,
-      keyword_id: keyword
-    }
-    KeywordBrandStatement.create(obj).then(r => res.json(r))
+    keywords.forEach(keyword => {
+      let obj = {
+        brandstatement_id: newStatement.id,
+        keyword_id: keyword
+      }
+      KeywordBrandStatement.create(obj).then(r => {
+        created.push(r)
+        if (created.length === 3) {
+          res.json(newStatement)
+        }
+      })
+    })
   })
     .catch(e => console.log(e))
 })
