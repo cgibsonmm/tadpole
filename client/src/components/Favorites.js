@@ -7,6 +7,8 @@ export default function Favorties({ location }) {
   const [data, setData] = useState([])
   const [input, setInput] = useState('')
   const [editOpen, setEditOpen] = useState(false);
+  const myItems = localStorage.getItem('myStatements')
+  console.log(myItems)
 
   useEffect(() => {
     if (location.state) {
@@ -15,6 +17,10 @@ export default function Favorties({ location }) {
           setData(res.data)
           setInput(res.data.statement)
         })
+    }
+    if (myItems.length > 0) {
+      Axios.get(`/mybrands/${myItems}`)
+        .then(res => console.log(res))
     }
   }, [])
 
@@ -60,6 +66,7 @@ export default function Favorties({ location }) {
             {data.statement}
             <img onClick={handleEditClick} className="edit-button" src={picture}></img>
           </div>
+          <button className="delete-button">Delete</button>
         </div>
       </body>
 

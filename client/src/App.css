@@ -88,6 +88,7 @@ button:focus {
   align-items: center;
   flex-direction: column;
   background-color: #ACDF87;
+  min-height: 100vh;
 }
 
 .word-box {
@@ -241,6 +242,13 @@ flex-direction: column;
   color:rgb(20, 58, 33);
 }
 
+.delete-button {
+  border-radius: 30px;
+  width: 110px;
+  height: 30px;
+  font-size: 20px;
+}
+
 @media (max-width: 600px) {
 .nav  {
   display: flex;
@@ -327,7 +335,7 @@ flex-direction: column;
 
 }
 
-@media (max-width: 768px) and (min-width:600px) {
+@media (max-width: 768px) and (min-width:300px) {
   .word-box {
     display: flex;
     flex-direction: row;

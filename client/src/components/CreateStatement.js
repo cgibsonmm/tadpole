@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import picture from '../img/pencil.png';
-import arrowup from '../img/up.png'
-import arrowdown from '../img/down.png'
+import { useAlert } from 'react-alert';
 
-export default function CreateStatement({ statement, keywords }) {
+function CreateStatement({ statement, keywords }) {
+  const alert = useAlert();
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
@@ -39,13 +39,19 @@ export default function CreateStatement({ statement, keywords }) {
 
           localStorage.setItem('myStatements', JSON.stringify(myStatements))
         }
+        alert.show('Created Statement', {
+          timeout: 2000
+        })
         /// Code above was partialy from
         /// https://stackoverflow.com/questions/48133909/array-push-is-not-working-for-local-storage
       });
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
     let formattedStatement = statement.map(sentence => {
@@ -55,7 +61,6 @@ export default function CreateStatement({ statement, keywords }) {
     })
     setSavedText(formattedStatement)
   }
-
 
   useEffect(() => {
     if (savedText.length === 3) {
@@ -84,6 +89,7 @@ export default function CreateStatement({ statement, keywords }) {
 
   return (
     <body className='ipad-body'>
+<<<<<<< HEAD
     <div className="stack-statement">
     <div key={statement.id} className="word-box">
       <p className="box-text">
@@ -97,6 +103,19 @@ export default function CreateStatement({ statement, keywords }) {
       <img onClick={() => setCount(count - 1)} src={arrowdown} className="arrow"></img>
     </div>
     </div>
+=======
+      <div className="stack-statement">
+        <div key={statement.id} className="word-box">
+          <p className="box-text">
+            {text}
+          </p>
+          <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
+        </div>
+      </div>
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
     </body>
   )
 }
+
+
+export default CreateStatement;

@@ -166,7 +166,7 @@ routes.get('/brandstatement/:id', (req, res) => {
 
 routes.put('/brandstatement/:id', (req, res) => {
   let id = req.params.id
-  let statement = req.body.statement
+  let statement = req.body.statement;
   BrandStatement.update(req.body, {
     where: {
       id: id
@@ -176,6 +176,7 @@ routes.put('/brandstatement/:id', (req, res) => {
     .catch(e => res.json(e))
 })
 
+<<<<<<< HEAD
 routes.delete('/brandstatement/:id', (req,res) => {
   let id = req.params.id
   BrandStatement.destroy({
@@ -190,4 +191,11 @@ routes.delete('/brandstatement/:id', (req,res) => {
 })
 
 
+=======
+routes.get('/mybrands/:body', (req, res) => {
+  let keywords = req.params.id;
+  res.send(keyword)
+  console.log(keywords)
+})
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
 module.exports = routes;
