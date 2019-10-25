@@ -172,19 +172,19 @@ routes.put('/brandstatement/:id', (req, res) => {
   })
     .then(statement => res.json(statement))
     .catch(e => res.json(e))
-}
-           
-routes.delete('/brandstatement/:id', (req,res) => {
+})
+
+routes.delete('/brandstatement/:id', (req, res) => {
   let id = req.params.id
   BrandStatement.destroy({
     where: {
       id: id
     }
   })
-  .then(() => {
-    res.json({msg: "deleted"});
-  })
-  .catch(e => res.json(e))
+    .then(() => {
+      res.json({ msg: "deleted" });
+    })
+    .catch(e => res.json(e))
 })
 
 
