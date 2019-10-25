@@ -10,6 +10,7 @@ module.exports = {
       },
       keyword_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: 'Keywords',
           key: 'id',
@@ -17,6 +18,7 @@ module.exports = {
       },
       brandstatement_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: 'BrandStatements',
           key: 'id',

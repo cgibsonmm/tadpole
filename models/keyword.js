@@ -8,11 +8,13 @@ module.exports = (sequelize, DataTypes) => {
       through: 'KeywordSentences',
       as: 'sentences',
       foreignKey: 'keyword_id',
-      otherKey: 'sentence_id'
+      otherKey: 'sentence_id',
     }),
       Keyword.belongsToMany(models.BrandStatement, {
         through: 'KeywordBrandStatments',
         foreignKey: 'keyword_id',
+        otherKey: 'brandstatement_id',
+        onDelete: 'CASCADE'
       })
   };
   return Keyword;

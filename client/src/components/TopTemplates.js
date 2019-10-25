@@ -9,7 +9,10 @@ export default function TopTemplates() {
 
   useEffect(() => {
     Axios.get('/api/brandstatements')
-      .then(res => setData(res.data))
+      .then(res => {
+        console.log(res.data)
+        setData(res.data)
+      })
   }, [])
 
   return (
@@ -17,6 +20,7 @@ export default function TopTemplates() {
       <Nav />
       <body className="body">
         <div className="template-boxes">
+
           {data.map(statement => (
             <WordBox key={statement.id} statement={statement} />
           ))}

@@ -4,9 +4,16 @@ import ButtonList from './ButtonList';
 
 function CreateTemplate({ handleSaveClick, trackWords }) {
   const [input, setInput] = useState('')
+  const [disabled, setDisabled] = useState(true);
+
   const handleInput = (e) => {
     let string = e.target.value;
     setInput(string)
+    if (string.split('').length >= 150) {
+      setDisabled(false)
+    } else {
+      setDisabled(true)
+    }
   }
   const handleClick = (e) => {
     e.preventDefault()
@@ -25,7 +32,7 @@ function CreateTemplate({ handleSaveClick, trackWords }) {
               Click the save button once you're happy with your statement and word choices.
       </p>
             <ButtonList trackWords={trackWords} />
-            <button onClick={handleClick} className="save-button">Save</button>
+            <button disabled={disabled} onClick={handleClick} className="save-button">Save</button>
           </div>
         </body>
       </>

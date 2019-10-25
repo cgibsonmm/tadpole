@@ -1,19 +1,17 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const KeywordBrandStatement = sequelize.define('KeywordBrandStatement', {
-    keywordId: DataTypes.INTEGER,
-    brandStatementId: DataTypes.INTEGER
+    keyword_id: DataTypes.INTEGER,
+    brandstatement_id: DataTypes.INTEGER
   }, {});
   KeywordBrandStatement.associate = function (models) {
     KeywordBrandStatement.belongsTo(models.Keyword, {
       foreignKey: 'keyword_id',
-      targetKey: 'id',
-      as: 'Keyword'
+      onDelete: 'CASCADE'
     })
     KeywordBrandStatement.belongsTo(models.BrandStatement, {
       foreignKey: 'brandstatement_id',
-      targetKey: 'id',
-      as: 'BrandStatement'
+      onDelete: 'CASCADE'
     })
   };
   return KeywordBrandStatement;

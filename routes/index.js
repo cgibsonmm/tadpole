@@ -136,7 +136,6 @@ routes.post('/createbrandstatement', async (req, res) => {
   let keywords = params.keywords
   let created = []
 
-  // console.log({ req.body }
   BrandStatement.create({
     statement: statement
   }).then(newStatement => {
@@ -175,12 +174,19 @@ routes.put('/brandstatement/:id', (req, res) => {
     .catch(e => res.json(e))
 })
 
-routes.get('/mybrands/:body', (req, res) => {
-  let keywords = req.params.id;
-  res.send(keyword)
-  console.log(keywords)
+
+// returns all BrandStatements in local storage
+routes.get('/mybrands/:id', (req, res) => {
+  let id = req.params.id
+  BrandStatement.findByPk(id)
+    .then(brand => {
+      res.json(brand)
+    })
+    .catch(e => console.log(e))
 })
 
+
+// Voting 
 routes.put('/up/:id', (req, res) => {
   let id = req.params.id;
   BrandStatement.increment({
@@ -194,6 +200,7 @@ routes.put('/up/:id', (req, res) => {
     .catch(e => res.json({ err: e.message }))
 })
 
+// Downvote
 routes.put('/down/:id', (req, res) => {
   let id = req.params.id;
   BrandStatement.decrement({
@@ -205,5 +212,27 @@ routes.put('/down/:id', (req, res) => {
   })
     .then(r => res.json(r))
     .catch(e => res.json({ err: e.message }))
+})
+
+
+// Returns Keywords to build join on next create
+routes.get('/keywordsarr/:id', (req, res) => {
+  KeywordBrandStatement.findAll({
+    where: {
+      'brandstatement_id': req.params.id
+    }
+  })
+    .then(s => res.json(s))
+    .catch(e => res.json({ err: e }))
+})
+
+routes.delete('/brandstatement/:id', (req, res) => {
+  BrandStatement.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(r => res.json(deleted))
+    .catch(e => res.json(e => e.message))
 })
 module.exports = routes;

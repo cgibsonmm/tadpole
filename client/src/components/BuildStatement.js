@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useAlert } from 'react-alert';
 
 import { Redirect } from 'react-router-dom';
 import CreateTemplate from './CreateTemplate'
@@ -6,6 +7,7 @@ import ButtonList from './ButtonList';
 import Axios from 'axios';
 
 export default function BuildStatement() {
+  const alert = useAlert();
   const [selectedArr, setSelectedArr] = useState([])
   const [res, setRes] = useState([])
   const [resSaved, setResSaved] = useState(false)
@@ -29,6 +31,18 @@ export default function BuildStatement() {
       statement: text
     })
       .then(res => {
+        if (localStorage) {
+          let myStatements;
+          if (!localStorage['myStatements']) myStatements = [];
+          else myStatements = JSON.parse(localStorage['myStatements'])
+          if (!(myStatements instanceof Array)) myStatements = [];
+          myStatements.push(res.data.id);
+
+          localStorage.setItem('myStatements', JSON.stringify(myStatements))
+        }
+        alert.show('Created Statement', {
+          timeout: 2000
+        })
         setRes(res.data)
         setResSaved(true)
       })
@@ -37,7 +51,6 @@ export default function BuildStatement() {
   }
 
   const trackWords = (arr) => {
-    console.log('helloi')
     let currentArr = arr
     setSelectedArr(currentArr)
     setSendData(data => ({

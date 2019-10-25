@@ -32,7 +32,6 @@ export default function MainPage({ location }) {
     }]
     resData.forEach((item, index) => {
       item.forEach((i, idx) => {
-        console.log(i)
         statements[idx].statement.push(`${state.name} ${i.string}.`)
       })
     })

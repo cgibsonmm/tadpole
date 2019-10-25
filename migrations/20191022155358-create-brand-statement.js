@@ -14,7 +14,7 @@ module.exports = {
       }, rank: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        defaultValue: 1
+        defaultValue: 0
       },
       createdAt: {
         allowNull: false,

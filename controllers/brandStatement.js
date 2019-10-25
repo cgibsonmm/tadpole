@@ -1,4 +1,4 @@
-const { BrandStatement } = require("../models")
+const { BrandStatement, Keyword, KeywordBrandStatements } = require("../models")
 const sequelize = require('sequelize')
 
 const getAllBrandStatements = (req, res) => {
