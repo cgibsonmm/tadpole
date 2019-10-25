@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const seqeulize = require('sequelize')
 const routes = Router();
 const controllers = require('../controllers')
 const sentenceController = require('../controllers/sentences')
@@ -8,8 +9,6 @@ const { BrandStatement, Sentence, Keyword, KeywordSentences, KeywordBrandStateme
 
 routes.get('/keywords', controllers.getAllKeywords)
 routes.get('/brandstatements', brandController.getAllBrandStatements)
-
-
 
 routes.get("/brandstatements/:id", async (req, res) => {
   let id = parseInt(req.params.id)
@@ -180,5 +179,31 @@ routes.get('/mybrands/:body', (req, res) => {
   let keywords = req.params.id;
   res.send(keyword)
   console.log(keywords)
+})
+
+routes.put('/up/:id', (req, res) => {
+  let id = req.params.id;
+  BrandStatement.increment({
+    rank: 1
+  }, {
+    where: {
+      id: id
+    }
+  })
+    .then(r => res.json(r))
+    .catch(e => res.json({ err: e.message }))
+})
+
+routes.put('/down/:id', (req, res) => {
+  let id = req.params.id;
+  BrandStatement.decrement({
+    rank: 1
+  }, {
+    where: {
+      id: id
+    }
+  })
+    .then(r => res.json(r))
+    .catch(e => res.json({ err: e.message }))
 })
 module.exports = routes;

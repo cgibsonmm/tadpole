@@ -10,7 +10,7 @@ export default function WordBox({ statement }) {
         {statement.statement}
         <img className="edit-button" src={picture}></img>
       </div>
-      <DirectArrows />
+      <DirectArrows rank={statement.rank} id={statement.id} />
     </>
   )
 }

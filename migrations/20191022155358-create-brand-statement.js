@@ -9,7 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       statement: {
+        allowNull: false,
         type: Sequelize.TEXT
+      }, rank: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        defaultValue: 1
       },
       createdAt: {
         allowNull: false,

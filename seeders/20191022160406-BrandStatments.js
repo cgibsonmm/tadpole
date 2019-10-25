@@ -1,13 +1,16 @@
 'use strict';
 const statements = [
   {
-    statement: 'I am funny. I am happy'
+    statement: 'I am funny. I am happy',
+    rank: 1
   },
   {
-    statement: 'I am funny. I am happy'
+    statement: 'I am funny. I am happy',
+    rank: 89
   },
   {
-    statement: 'I am funny. I am happy'
+    statement: 'I am funny. I am happy',
+    rank: 1
   }
 ]
 

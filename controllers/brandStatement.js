@@ -1,7 +1,10 @@
 const { BrandStatement } = require("../models")
+const sequelize = require('sequelize')
 
 const getAllBrandStatements = (req, res) => {
-  BrandStatement.findAll()
+  BrandStatement.findAll({
+    order: sequelize.literal('rank DESC'),
+  }, { limit: 15 })
     .then(statement => {
       res.json(statement)
     })
@@ -14,7 +17,6 @@ const findBrandStatementById = (req, res) => {
     .then(statement => res.json(statement))
     .catch(e => res.json({ error: e }))
 }
-
 
 module.exports = {
   getAllBrandStatements,
