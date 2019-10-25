@@ -8,6 +8,8 @@ function CreateStatement({ statement, keywords }) {
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState(statement.statement.join(' '))
   const [savedText, setSavedText] = useState([])
+  const [count, setCount] = useState(0)
+  console.log(count)
 
   const handleClick = () => {
     setToggle(!toggle)
@@ -45,6 +47,11 @@ function CreateStatement({ statement, keywords }) {
       });
   }
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
   const formatTextFormatSubmit = (text) => {
     let statement = text.split('. ')
     let formattedStatement = statement.map(sentence => {
@@ -77,8 +84,26 @@ function CreateStatement({ statement, keywords }) {
     )
   }
 
+
+
+
   return (
     <body className='ipad-body'>
+<<<<<<< HEAD
+    <div className="stack-statement">
+    <div key={statement.id} className="word-box">
+      <p className="box-text">
+        {text}
+      </p>
+      <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
+    </div>
+    <div className='direct-arrows'>
+      <p className='vote'>Vote</p>
+      <img onClick={() => setCount(count + 1)} src={arrowup} className="arrow"></img>
+      <img onClick={() => setCount(count - 1)} src={arrowdown} className="arrow"></img>
+    </div>
+    </div>
+=======
       <div className="stack-statement">
         <div key={statement.id} className="word-box">
           <p className="box-text">
@@ -87,6 +112,7 @@ function CreateStatement({ statement, keywords }) {
           <img onClick={handleClick} className="edit-button" value={text} src={picture}></img>
         </div>
       </div>
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
     </body>
   )
 }
