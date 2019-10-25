@@ -176,9 +176,26 @@ routes.put('/brandstatement/:id', (req, res) => {
     .catch(e => res.json(e))
 })
 
+<<<<<<< HEAD
+routes.delete('/brandstatement/:id', (req,res) => {
+  let id = req.params.id
+  BrandStatement.destroy({
+    where: {
+      id: id
+    }
+  })
+  .then(() => {
+    res.json({msg: "deleted"});
+  })
+  .catch(e => res.json(e))
+})
+
+
+=======
 routes.get('/mybrands/:body', (req, res) => {
   let keywords = req.params.id;
   res.send(keyword)
   console.log(keywords)
 })
+>>>>>>> cd1c2a342976d1a5b4367973acef41e7193f68a1
 module.exports = routes;
