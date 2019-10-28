@@ -72,25 +72,25 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Project WireFrame | M | 4hrs | 0 | 0 |
-| Building ORM | M | 2hrs | 0 | 0 |
-| Building Server | H | 2hrs | 0 | 0 |
-| Adding Backend Routes | H | 4hrs| 0 | 0 |
-| Adding Controllers | H | 4hrs | 0 | 0 |
-| Building Models | H | 4hrs| 0 | 0 |
-| Building Join Tables | H | 4 hrs | 0 | 0 |
-| Creating User Stories | M | 2.5hrs | 0 | 0 |
-| Building Basic Frontend Structure | H | 4hrs | 0 | 0 | 
-| Building Froms | H | 3hrs | 0 | 0 |
-| Creating/Searching Seed Data | M | 2.5hrs | 0 | 0 |
-| Creating View Files for Routes | M | 4hrs | 0 | 0 |
-| Styling | H | 4hrs | 0 | 0 |
-| Desktop Design | M | 3hrs | 0 | 0 | 
-| Mobile Design | H | 4hrs | 0 | 0 |
-| Git conflicts | H | 3.5hrs | 0 | 0 |
-| Debugging | H | 4hrs | 0 | 0 |
-| Unkown setbacks| H | 4hrs | 0 | 0 |
-| Total | H | 60hrs| 0 | 0 |
+| Project WireFrame | M | 4hrs | 3 | 3 |
+| Building ORM | M | 2hrs | 1 | 1 |
+| Building Server | H | 2hrs | 3 | 3 |
+| Adding Backend Routes | H | 4hrs| 4 | 4 |
+| Adding Controllers | H | 4hrs | 2 | 2 |
+| Building Models | H | 4hrs| 4 | 4 |
+| Building Join Tables | H | 4 hrs | 5 | 5 |
+| Creating User Stories | M | 2.5hrs | 1 | 1 |
+| Building Basic Frontend Structure | H | 4hrs | 3 | 3 | 
+| Building Froms | H | 3hrs | 4 | 4 |
+| Creating/Searching Seed Data | M | 2.5hrs | 1 | 1 |
+| Creating View Files for Routes | M | 4hrs | 2 | 2 |
+| Styling | H | 4hrs | 4 | 4 |
+| Desktop Design | M | 3hrs | 2 | 2 | 
+| Mobile Design | H | 4hrs | 4 | 4 |
+| Git conflicts | H | 3.5hrs | 1 | 1 |
+| Debugging | H | 4hrs | 06 | 6 |
+| Unkown setbacks| H | 4hrs | 5 | 5 |
+| Total | H | 60hrs| 55 | 55 |
 
 
 ## Additional Libraries
